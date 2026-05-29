@@ -1,0 +1,4074 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICRA 2026 个人参会计划</title>
+  <style>
+    :root {
+      --bg: #f5f2eb;
+      --ink: #202124;
+      --muted: #64615b;
+      --line: #ddd5c8;
+      --paper: #fffaf1;
+      --paper-2: #ffffff;
+      --red: #b3263b;
+      --teal: #00767a;
+      --blue: #244a7f;
+      --green: #587246;
+      --gold: #9a6b18;
+      --shadow: 0 18px 46px rgba(32, 33, 36, .11);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      background:
+        linear-gradient(180deg, rgba(179, 38, 59, .08), rgba(245, 242, 235, 0) 420px),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+    .page { max-width: 1180px; margin: 0 auto; padding: 32px 18px 56px; }
+    .hero {
+      min-height: 58vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      padding: 56px 34px 30px;
+      border-radius: 8px;
+      color: white;
+      background:
+        linear-gradient(120deg, rgba(28, 24, 22, .82), rgba(28, 24, 22, .52)),
+        url("https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=1800&q=80") center/cover;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: auto 28px 24px auto;
+      width: min(360px, 42vw);
+      height: 180px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, transparent 49%, rgba(255,255,255,.18) 50%, transparent 51%),
+        linear-gradient(0deg, transparent 49%, rgba(255,255,255,.16) 50%, transparent 51%);
+      opacity: .32;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 18px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255,255,255,.38);
+      background: rgba(255,255,255,.13);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: .02em;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      max-width: 840px;
+      font-size: clamp(34px, 6vw, 68px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h1 span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255,255,255,.76);
+      font-size: clamp(18px, 2.2vw, 28px);
+      font-weight: 650;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255,255,255,.88);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .hero-stat {
+      min-width: 112px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.24);
+    }
+
+    .hero-stat b { display: block; font-size: 22px; line-height: 1; }
+    .hero-stat span { font-size: 12px; color: rgba(255,255,255,.78); }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 18px 0 24px;
+      padding: 10px;
+      background: rgba(245, 242, 235, .9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--line);
+      color: #3f3d39;
+      font-size: 14px;
+    }
+
+    .toolbox {
+      position: sticky;
+      top: 58px;
+      z-index: 18;
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto auto;
+      gap: 10px;
+      align-items: center;
+      margin: -10px 0 24px;
+      padding: 10px;
+      border: 1px solid rgba(221,213,200,.9);
+      border-radius: 8px;
+      background: rgba(255,250,241,.94);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 12px 28px rgba(32,33,36,.08);
+    }
+
+    .searchbox {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 8px;
+      align-items: center;
+      min-width: 0;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .searchbox input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      color: var(--ink);
+      background: transparent;
+      font: inherit;
+    }
+
+    .segmented, .quick-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+
+    .toolbox button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: white;
+      color: #3f3d39;
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .toolbox button.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: white;
+    }
+
+    .result-count {
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 12px;
+      min-height: 16px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 34px 0 14px;
+    }
+
+    h2 { margin: 0; font-size: 27px; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 20px; letter-spacing: 0; }
+    .small { color: var(--muted); font-size: 14px; }
+
+    .grid { display: grid; gap: 14px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(32,33,36,.05);
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .tagrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .tag {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #eef5f2;
+      color: #204f4c;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .route-board {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .venue-map {
+      position: relative;
+      min-height: 360px;
+      padding: 18px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(0,118,122,.10), rgba(179,38,59,.08)),
+        #fffdf8;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 32px rgba(32,33,36,.06);
+    }
+
+    .venue-map:before {
+      content: "";
+      position: absolute;
+      inset: 52px 40px 60px;
+      border: 2px dashed rgba(36,74,127,.24);
+      border-radius: 18px;
+      transform: rotate(-2deg);
+    }
+
+    .map-title {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: #37332f;
+      font-weight: 800;
+    }
+
+    .node {
+      position: absolute;
+      z-index: 3;
+      display: grid;
+      place-items: center;
+      width: 116px;
+      min-height: 64px;
+      padding: 8px;
+      text-align: center;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 22px rgba(32,33,36,.10);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .node small { display: block; margin-top: 2px; color: var(--muted); font-weight: 600; }
+    .node.entry { left: 7%; top: 58%; border-color: rgba(179,38,59,.35); }
+    .node.halla { left: 35%; top: 18%; border-color: rgba(179,38,59,.35); }
+    .node.hallc { right: 10%; top: 22%; border-color: rgba(0,118,122,.35); }
+    .node.strauss { right: 16%; bottom: 18%; border-color: rgba(154,107,24,.38); }
+    .node.lehar { left: 35%; bottom: 14%; border-color: rgba(36,74,127,.35); }
+    .node.expo { left: 7%; top: 20%; border-color: rgba(88,114,70,.35); }
+
+    .route-curve {
+      position: absolute;
+      z-index: 1;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--red), var(--teal), var(--blue));
+      opacity: .68;
+      transform-origin: left center;
+    }
+
+    .route-curve.a { width: 260px; left: 19%; top: 58%; transform: rotate(-28deg); }
+    .route-curve.b { width: 240px; left: 46%; top: 32%; transform: rotate(10deg); }
+    .route-curve.c { width: 230px; left: 48%; top: 61%; transform: rotate(-8deg); }
+    .route-curve.d { width: 180px; left: 18%; top: 29%; transform: rotate(28deg); }
+
+    .route-lanes { display: grid; gap: 10px; }
+    .lane {
+      position: relative;
+      padding: 14px 14px 14px 44px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .lane:before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 17px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 0 5px rgba(0,118,122,.12);
+    }
+
+    .lane.red:before { background: var(--red); box-shadow: 0 0 0 5px rgba(179,38,59,.12); }
+    .lane.gold:before { background: var(--gold); box-shadow: 0 0 0 5px rgba(154,107,24,.14); }
+    .lane.blue:before { background: var(--blue); box-shadow: 0 0 0 5px rgba(36,74,127,.12); }
+    .lane strong { display: block; margin-bottom: 4px; }
+
+    .week-board {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(270px, 1fr));
+      gap: 14px;
+      padding: 6px 2px 10px;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+    }
+
+    .hero-schedule {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid rgba(221,213,200,.95);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(179,38,59,.08), rgba(0,118,122,.08)),
+        #fffaf1;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-schedule .section-title {
+      margin-top: 0;
+    }
+
+    .logic-strip {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr .85fr;
+      gap: 10px;
+      margin: 2px 0 16px;
+    }
+
+    .logic-card {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 8px 20px rgba(32,33,36,.05);
+    }
+
+    .logic-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #2f2b27;
+      font-size: 14px;
+    }
+
+    .logic-card span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .logic-card.primary-rule {
+      border-left: 5px solid var(--red);
+      background: #fff9f5;
+    }
+
+    .logic-card.backup-rule {
+      border-left: 5px solid rgba(154,107,24,.55);
+    }
+
+    .day-panel {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 14px 32px rgba(32,33,36,.08);
+      scroll-snap-align: start;
+    }
+
+    .day-panel h3 {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 0 0 6px;
+      font-size: 21px;
+      line-height: 1.1;
+    }
+
+    .day-panel h3 span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .agenda-chip {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 10px;
+      border-radius: 8px;
+      background: #fffaf1;
+      border-left: 4px solid var(--teal);
+      font-size: 13px;
+    }
+
+    .agenda-chip.primary {
+      background: #fff6e6;
+      border-left-width: 6px;
+      box-shadow: inset 0 0 0 1px rgba(179,38,59,.08);
+    }
+
+    .agenda-chip.must { border-left-color: var(--red); }
+    .agenda-chip.core { border-left-color: var(--teal); }
+    .agenda-chip.alt { border-left-color: var(--gold); }
+    .agenda-chip.net { border-left-color: var(--blue); }
+
+    .agenda-chip b {
+      color: #312d29;
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .agenda-chip span {
+      color: #3d3933;
+      line-height: 1.3;
+    }
+
+    .agenda-chip strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .agenda-chip em {
+      display: block;
+      color: var(--muted);
+      font-style: normal;
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .choice-group {
+      display: grid;
+      gap: 6px;
+      padding: 8px;
+      border: 1px dashed rgba(154,107,24,.25);
+      border-radius: 8px;
+      background: rgba(255,253,248,.64);
+    }
+
+    .choice-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: #7a6a4c;
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .choice-grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .choice-grid .agenda-chip {
+      grid-template-columns: 1fr;
+      min-height: 0;
+      padding: 7px 8px;
+      border-left-width: 3px;
+      background: #fbfaf7;
+      font-size: 11px;
+      box-shadow: none;
+    }
+
+    .choice-grid .agenda-chip b {
+      color: #74684f;
+      font-size: 10px;
+    }
+
+    .choice-grid .agenda-chip strong {
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .choice-grid .agenda-chip em {
+      font-size: 11px;
+    }
+
+    .route-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: linear-gradient(90deg, #fffaf1, #f5fbfb);
+    }
+
+    .route-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .arrow {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .time-map {
+      display: grid;
+      gap: 8px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffdf8;
+      box-shadow: 0 10px 24px rgba(32,33,36,.05);
+    }
+
+    .time-ruler {
+      position: relative;
+      height: 24px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .tick {
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .tick:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 17px;
+      width: 1px;
+      height: 7px;
+      background: var(--line);
+    }
+
+    .time-lane {
+      position: relative;
+      height: 40px;
+      border-radius: 8px;
+      background:
+        repeating-linear-gradient(90deg, rgba(221,213,200,.34) 0 1px, transparent 1px 12.5%),
+        linear-gradient(90deg, #fffaf1, #f4fbfb);
+      overflow: hidden;
+    }
+
+    .time-block {
+      position: absolute;
+      top: 6px;
+      min-height: 28px;
+      min-width: 44px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 10px;
+      color: white;
+      font-size: 12px;
+      font-weight: 850;
+      box-shadow: 0 8px 18px rgba(32,33,36,.16);
+      overflow: visible;
+      white-space: normal;
+      text-overflow: clip;
+    }
+
+    .time-block.must { background: var(--red); }
+    .time-block.core { background: var(--teal); }
+    .time-block.alt { background: var(--gold); }
+    .time-block.net { background: var(--blue); }
+
+    .time-block small {
+      opacity: .86;
+      font-weight: 750;
+    }
+
+    .time-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .mini-agenda {
+      display: grid;
+      gap: 7px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,.28);
+    }
+
+    .mini-slot {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 8px;
+      align-items: center;
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .mini-slot b {
+      color: rgba(255,255,255,.88);
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+    .mini-slot span {
+      overflow: visible;
+      white-space: normal;
+      text-overflow: clip;
+      color: rgba(255,255,255,.82);
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .matrix .card {
+      padding: 14px;
+      min-height: 130px;
+      background: linear-gradient(180deg, #fff, #fffaf1);
+    }
+
+    .score {
+      display: inline-flex;
+      margin-bottom: 9px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #eef5f2;
+      color: #1f5551;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: #3d3933;
+      font-size: 13px;
+    }
+
+    .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+    .must .dot, .dot.must { background: var(--red); }
+    .core .dot, .dot.core { background: var(--teal); }
+    .alt .dot, .dot.alt { background: var(--gold); }
+    .net .dot, .dot.net { background: var(--blue); }
+
+    .day {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .date {
+      position: sticky;
+      top: 72px;
+      align-self: start;
+      padding: 16px;
+      border-radius: 8px;
+      color: white;
+      background: linear-gradient(135deg, #8b1d31, #264e6a);
+    }
+
+    .date .dow { font-size: 13px; opacity: .78; }
+    .date .num { font-size: 31px; font-weight: 800; line-height: 1.12; margin: 4px 0 8px; }
+    .date .theme { font-size: 14px; opacity: .92; }
+
+    .timeline { display: grid; gap: 10px; }
+    .item {
+      display: grid;
+      grid-template-columns: 118px 1fr;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--teal);
+      background: var(--paper-2);
+      border-radius: 8px;
+    }
+    .item.must { border-left-color: var(--red); }
+    .item.alt { border-left-color: var(--gold); }
+    .item.net { border-left-color: var(--blue); }
+    .item.parallel-alt {
+      height: 100%;
+      background: #fffdf8;
+    }
+    .parallel-options {
+      display: grid;
+      gap: 9px;
+      padding: 10px;
+      border: 1px dashed rgba(154,107,24,.28);
+      border-radius: 8px;
+      background: #fffdf8;
+    }
+    .parallel-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: #77684d;
+      font-size: 12px;
+      font-weight: 850;
+    }
+    .parallel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .time {
+      color: #5a554d;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .title { font-weight: 800; font-size: 16px; margin-bottom: 4px; }
+    .zh-title {
+      display: block;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+    .en-title {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.3;
+    }
+    .meta { color: var(--muted); font-size: 14px; }
+    .why { margin-top: 8px; color: #34312d; }
+    .papers { margin-top: 9px; padding-left: 17px; color: #3f3b36; }
+    .papers li { margin: 4px 0; }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .fact {
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #f7f3eb;
+      border: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .fact b {
+      display: block;
+      margin-bottom: 2px;
+      color: #35312c;
+      font-size: 12px;
+      letter-spacing: 0;
+    }
+
+    details.more {
+      margin-top: 10px;
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+    }
+
+    details.more summary {
+      cursor: pointer;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eef5f2;
+      color: #194e4b;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .speaker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .speaker {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffdf8;
+    }
+
+    .speaker img {
+      width: 54px;
+      height: 54px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 6px 14px rgba(32,33,36,.14);
+      background: #eee;
+    }
+
+    .speaker-avatar {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: linear-gradient(135deg, #f3e7dd, #dfeeee);
+      color: #314844;
+      box-shadow: 0 6px 14px rgba(32,33,36,.12);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .speaker-grid[data-loaded="true"] .speaker-avatar {
+      display: none;
+    }
+
+    .speaker-grid:not([data-loaded="true"]) img {
+      display: none;
+    }
+
+    .load-images {
+      width: fit-content;
+      margin-top: 10px;
+      border: 1px solid rgba(36,74,127,.28);
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: #fff;
+      color: var(--blue);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .speaker strong {
+      display: block;
+      line-height: 1.2;
+      font-size: 14px;
+    }
+
+    .speaker span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .speaker a, .links a {
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(36,74,127,.28);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .encyclopedia {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 14px;
+    }
+
+    .toc-card {
+      position: sticky;
+      top: 72px;
+      align-self: start;
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .toc-card a {
+      display: block;
+      padding: 8px 0;
+      text-decoration: none;
+      color: #3e3a35;
+      border-bottom: 1px solid rgba(221,213,200,.65);
+      font-size: 14px;
+    }
+
+    .wiki-list { display: grid; gap: 12px; }
+
+    .wiki {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 26px rgba(32,33,36,.05);
+    }
+
+    .wiki summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      font-weight: 850;
+    }
+
+    .wiki summary::-webkit-details-marker { display: none; }
+    .wiki summary:after {
+      content: "+";
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f7f3eb;
+      color: var(--red);
+      font-size: 20px;
+      line-height: 1;
+    }
+    .wiki[open] summary:after { content: "-"; }
+    .wiki-body { padding: 0 16px 16px; border-top: 1px solid var(--line); }
+
+    .term-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .term {
+      min-height: 96px;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffdf8;
+    }
+
+    .term strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .term em {
+      display: block;
+      margin-top: 2px;
+      color: var(--blue);
+      font-style: normal;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .term span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .is-hidden { display: none !important; }
+
+    .backtop {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: white;
+      color: var(--red);
+      box-shadow: 0 12px 28px rgba(32,33,36,.14);
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    .record-jump {
+      position: fixed;
+      right: 18px;
+      bottom: 66px;
+      z-index: 30;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 88px;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid rgba(177,40,58,.22);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--red);
+      box-shadow: 0 12px 28px rgba(32,33,36,.14);
+      font-size: 13px;
+      font-weight: 850;
+      text-decoration: none;
+    }
+
+    .source-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .strategy {
+      background: #142c38;
+      color: white;
+      border-radius: 8px;
+      padding: 22px;
+    }
+    .strategy h2, .strategy h3 { color: white; }
+    .strategy p, .strategy li { color: rgba(255,255,255,.84); }
+
+    .sources {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .sources a { color: #244a7f; }
+
+    /* Clean layout pass: reduce visual noise and make hierarchy easier to scan. */
+    :root {
+      --bg: #f7f6f2;
+      --ink: #1f2428;
+      --muted: #6c706f;
+      --line: #e2ded6;
+      --paper: #fbfaf7;
+      --paper-2: #ffffff;
+      --red: #b1283a;
+      --teal: #08787a;
+      --blue: #2f5c8a;
+      --gold: #a17424;
+      --shadow: 0 16px 36px rgba(31, 36, 40, .08);
+    }
+
+    body {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.72), rgba(247,246,242,0) 360px),
+        var(--bg);
+    }
+
+    .page {
+      max-width: 1320px;
+      padding: 28px 24px 64px;
+    }
+
+    .hero {
+      min-height: 430px;
+      padding: 46px 42px 34px;
+      background:
+        linear-gradient(120deg, rgba(20, 24, 27, .82), rgba(20, 24, 27, .48)),
+        url("https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=1800&q=80") center/cover;
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: var(--shadow);
+    }
+
+    .hero:after { display: none; }
+    .hero p { max-width: 850px; }
+
+    .hero-stat {
+      background: rgba(255,255,255,.12);
+      border-color: rgba(255,255,255,.2);
+    }
+
+    .nav {
+      margin: 16px 0 12px;
+      padding: 8px 0;
+      background: rgba(247,246,242,.92);
+      border-bottom: 0;
+    }
+
+    .nav a {
+      padding: 7px 11px;
+      background: transparent;
+      border-color: transparent;
+      color: #424845;
+    }
+
+    .nav a:hover {
+      background: white;
+      border-color: var(--line);
+    }
+
+    .toolbox {
+      top: 48px;
+      margin: 0 0 18px;
+      padding: 12px;
+      background: rgba(255,255,255,.92);
+      border-color: var(--line);
+      box-shadow: 0 10px 26px rgba(31,36,40,.06);
+    }
+
+    .toolbox button,
+    .searchbox {
+      background: #fff;
+      border-color: #ded9cf;
+    }
+
+    .section-title {
+      margin: 30px 0 12px;
+    }
+
+    h2 { font-size: 29px; }
+    .small { color: #68706d; }
+
+    .card,
+    .day-panel,
+    .logic-card,
+    .time-map,
+    .wiki,
+    .toc-card,
+    .venue-map,
+    .item,
+    .speaker {
+      box-shadow: none;
+      border-color: var(--line);
+    }
+
+    .hero-schedule {
+      margin-top: 16px;
+      padding: 18px;
+      background: #fff;
+      border-color: var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-schedule .section-title {
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logic-strip {
+      grid-template-columns: 1.15fr .9fr .9fr;
+      gap: 8px;
+      margin: 0 0 14px;
+    }
+
+    .logic-card {
+      padding: 10px 12px;
+      background: #fbfaf7;
+    }
+
+    .logic-card strong { font-size: 13px; }
+    .logic-card span { font-size: 12px; }
+
+    .week-board {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      padding: 0;
+      overflow-x: visible;
+    }
+
+    .day-panel {
+      gap: 8px;
+      padding: 14px;
+      background: #fff;
+      min-width: 0;
+    }
+
+    .day-panel h3 {
+      margin-bottom: 4px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+    }
+
+    .day-panel h3 span { font-size: 12px; }
+
+    .agenda-chip {
+      grid-template-columns: 70px 1fr;
+      padding: 9px 10px;
+      background: #fff;
+      border: 1px solid #ece7dc;
+      border-left: 4px solid var(--teal);
+    }
+
+    .agenda-chip.primary {
+      background: #fffafa;
+      border-color: #ead7d9;
+      border-left-width: 5px;
+      box-shadow: none;
+    }
+
+    .agenda-chip b {
+      color: #4a4d49;
+      font-size: 11px;
+    }
+
+    .agenda-chip strong {
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .agenda-chip em {
+      color: #757a78;
+      font-size: 11px;
+    }
+
+    .choice-group {
+      padding: 7px;
+      border-color: #e5dfd1;
+      background: #fbfaf7;
+    }
+
+    .choice-title {
+      color: #827765;
+      font-size: 10px;
+    }
+
+    .choice-grid {
+      gap: 6px;
+    }
+
+    .choice-grid .agenda-chip {
+      padding: 6px 7px;
+      background: #fbfaf7;
+      border-color: #ebe5d8;
+      opacity: .82;
+    }
+
+    .choice-grid .agenda-chip strong {
+      font-size: 11px;
+    }
+
+    .choice-grid .agenda-chip em,
+    .choice-grid .agenda-chip b {
+      font-size: 10px;
+    }
+
+    .profile { margin-top: 18px; }
+
+    .date {
+      background: #263a45;
+      box-shadow: none;
+    }
+
+    .day {
+      grid-template-columns: 190px 1fr;
+      gap: 14px;
+      padding: 16px 0;
+    }
+
+    .timeline {
+      gap: 9px;
+    }
+
+    .item {
+      padding: 13px;
+      background: #fff;
+    }
+
+    .item.parallel-alt {
+      background: #fbfaf7;
+    }
+
+    .parallel-options {
+      background: #fbfaf7;
+      border-color: #e5dfd1;
+    }
+
+    .facts {
+      gap: 7px;
+      margin: 9px 0;
+    }
+
+    .fact {
+      background: #fbfaf7;
+      border-color: #ebe6db;
+    }
+
+    .time-map {
+      padding: 12px;
+      background: #fff;
+    }
+
+    .time-lane {
+      background:
+        repeating-linear-gradient(90deg, rgba(226,222,214,.48) 0 1px, transparent 1px 12.5%),
+        #fbfaf7;
+    }
+
+    .matrix .card {
+      background: #fff;
+    }
+
+    .record-panel {
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid rgba(177,40,58,.22);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(177,40,58,.07), transparent 34%),
+        #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .record-panel .section-title {
+      margin-top: 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .recorder-grid {
+      display: grid;
+      grid-template-columns: minmax(300px, .78fr) 1.22fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .record-form,
+    .record-gallery {
+      display: grid;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .record-form {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffdf8;
+    }
+
+    .record-row {
+      display: grid;
+      gap: 6px;
+    }
+
+    .record-row label {
+      color: #4a4f4c;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .record-row input,
+    .record-row select,
+    .record-row textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 9px 10px;
+      background: #fbfaf7;
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .record-row textarea {
+      min-height: 132px;
+      resize: vertical;
+    }
+
+    .upload-box {
+      display: grid;
+      gap: 6px;
+      padding: 16px;
+      border: 1.5px dashed rgba(177,40,58,.42);
+      border-radius: 8px;
+      background: #fffafa;
+      cursor: pointer;
+    }
+
+    .upload-box input {
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    .upload-box strong {
+      color: var(--red);
+      font-size: 16px;
+    }
+
+    .upload-box span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .record-actions,
+    .gallery-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .record-actions button,
+    .gallery-actions button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: #fff;
+      color: #343a37;
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    .record-actions .primary {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+    }
+
+    .record-status {
+      min-height: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .record-hint {
+      margin: 0;
+      padding: 10px 12px;
+      border: 1px solid rgba(0,118,122,.18);
+      border-radius: 8px;
+      background: rgba(0,118,122,.06);
+      color: #2f4a49;
+      font-size: 13px;
+    }
+
+    .record-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .record-card {
+      display: grid;
+      gap: 8px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfaf7;
+    }
+
+    .record-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .record-head strong {
+      display: block;
+      line-height: 1.25;
+    }
+
+    .record-head span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .record-card p {
+      margin: 0;
+      white-space: pre-wrap;
+      color: #343a37;
+    }
+
+    .delete-record {
+      flex: 0 0 auto;
+      border: 1px solid #ead7d9;
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: #fff;
+      color: var(--red);
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 8px;
+    }
+
+    .media-grid img,
+    .media-grid video {
+      width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .media-name {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      overflow-wrap: anywhere;
+    }
+
+    .day {
+      grid-template-columns: 230px 1fr;
+    }
+
+    .mini-slot {
+      grid-template-columns: 64px minmax(0, 1fr);
+      align-items: start;
+    }
+
+    .mini-slot span {
+      overflow: visible;
+      white-space: normal;
+      text-overflow: clip;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .time-lane {
+      height: auto;
+      min-height: 50px;
+      overflow: visible;
+      padding: 4px 0;
+    }
+
+    .time-block {
+      height: auto;
+      min-height: 34px;
+      white-space: normal;
+      text-overflow: clip;
+      overflow: visible;
+      line-height: 1.25;
+      align-items: flex-start;
+      padding: 7px 10px;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .time-block small {
+      flex: 0 0 auto;
+    }
+
+    .time-map {
+      gap: 10px;
+    }
+
+    .time-lane {
+      height: 50px;
+      min-height: 50px;
+      overflow: visible;
+      padding: 0;
+    }
+
+    .time-block {
+      top: 10px;
+      height: 30px;
+      min-height: 30px;
+      min-width: 54px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 9px;
+      white-space: normal;
+      line-height: 1;
+      box-shadow: 0 8px 16px rgba(31,36,40,.12);
+    }
+
+    .time-block small {
+      display: block;
+      color: #fff;
+      opacity: 1;
+      font-size: 11px;
+      line-height: 1.05;
+      text-align: center;
+    }
+
+    .time-note {
+      display: grid;
+      gap: 8px;
+    }
+
+    .time-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .time-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 6px;
+    }
+
+    .time-list-item {
+      display: grid;
+      grid-template-columns: 9px 74px 1fr;
+      gap: 8px;
+      align-items: start;
+      padding: 7px 8px;
+      border: 1px solid #ebe6db;
+      border-radius: 8px;
+      background: #fbfaf7;
+      color: #343a37;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .time-list-item .dot {
+      margin-top: 4px;
+    }
+
+    .time-list-item b {
+      color: #4b514e;
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    .time-list-item span {
+      overflow-wrap: anywhere;
+    }
+
+    .primary-timeline {
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(177,40,58,.08), transparent 22%),
+        #fffdf8;
+      box-shadow: var(--shadow);
+    }
+
+    .primary-timeline .section-title {
+      margin-top: 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      align-items: center;
+    }
+
+    .timeline-guide {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr .9fr;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .guide-card {
+      padding: 11px 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfaf7;
+      color: #4a4f4c;
+      font-size: 13px;
+    }
+
+    .guide-card strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #2d3330;
+      font-size: 14px;
+    }
+
+    .master-days {
+      display: grid;
+      gap: 26px;
+    }
+
+    .master-day {
+      display: grid;
+      grid-template-columns: minmax(148px, 180px) 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .master-date {
+      position: sticky;
+      top: 116px;
+      padding: 16px;
+      border: 1px solid rgba(35,55,65,.2);
+      border-radius: 8px;
+      background: #223943;
+      color: #fff;
+    }
+
+    .master-date strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .master-date span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .master-line {
+      display: grid;
+      gap: 14px;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .master-line::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(var(--red), rgba(20,120,115,.35));
+    }
+
+    .master-event {
+      position: relative;
+      display: grid;
+      grid-template-columns: 118px 1fr;
+      gap: 16px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--teal);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .master-dot {
+      position: absolute;
+      left: -27px;
+      top: 22px;
+      width: 16px;
+      height: 16px;
+      border: 3px solid #fffdf8;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 0 1px rgba(20,120,115,.25);
+    }
+
+    .master-event.must {
+      border-left-color: var(--red);
+      background: #fffafa;
+      box-shadow: 0 16px 34px rgba(177,40,58,.12);
+      transform: translateX(-4px);
+    }
+
+    .master-event.must .master-dot {
+      background: var(--red);
+      width: 20px;
+      height: 20px;
+      left: -29px;
+      box-shadow: 0 0 0 5px rgba(177,40,58,.11);
+    }
+
+    .master-event.core { border-left-color: var(--teal); }
+    .master-event.core .master-dot { background: var(--teal); }
+    .master-event.alt {
+      border-left-color: var(--gold);
+      background: #fbfaf7;
+    }
+    .master-event.alt .master-dot { background: var(--gold); }
+    .master-event.net { border-left-color: var(--blue); }
+    .master-event.net .master-dot { background: var(--blue); }
+
+    .master-time {
+      color: #253039;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .master-priority {
+      display: inline-flex;
+      margin-top: 8px;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .master-event-title {
+      display: grid;
+      gap: 4px;
+      color: var(--ink);
+      font-weight: 880;
+      line-height: 1.25;
+    }
+
+    .master-event-title .zh-title {
+      font-size: 20px;
+    }
+
+    .master-event-title .en-title {
+      color: #5f6763;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    .master-event.must .master-event-title .zh-title {
+      font-size: 24px;
+    }
+
+    .master-event-meta,
+    .master-address {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .master-address {
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfaf7;
+      color: #39423f;
+    }
+
+    .master-address b {
+      display: inline-block;
+      margin-right: 6px;
+      color: var(--ink);
+    }
+
+    .master-event-text {
+      margin-top: 9px;
+      color: #3c423f;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .master-event details {
+      margin-top: 9px;
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+    }
+
+    .master-event summary {
+      cursor: pointer;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 820;
+    }
+
+    .master-detail {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .master-detail .facts {
+      margin: 0;
+    }
+
+    .master-detail p {
+      margin: 0;
+      color: #3c423f;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .master-detail .links {
+      margin-top: 0;
+    }
+
+    .master-full-link {
+      display: inline-flex;
+      width: fit-content;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 850;
+      text-decoration: none;
+    }
+
+    .mobile-tip {
+      display: none;
+    }
+
+    .dimension-area {
+      display: grid;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .dimension-drawer {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .dimension-drawer > summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      font-weight: 850;
+    }
+
+    .dimension-drawer > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .dimension-drawer > summary:after {
+      content: "+";
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .dimension-drawer[open] > summary:after {
+      content: "-";
+    }
+
+    .dimension-drawer > section,
+    .dimension-drawer > .dimension-pack {
+      padding: 0 16px 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 820px) {
+      .hero { min-height: 54vh; padding: 34px 20px 24px; }
+      .hero:after { display: none; }
+      .profile, .grid.two, .grid.three, .grid.four, .route-board, .matrix, .encyclopedia, .facts, .day, .toolbox, .term-grid, .logic-strip, .recorder-grid, .timeline-guide, .master-day, .master-event { grid-template-columns: 1fr; }
+      .master-date { position: relative; top: auto; }
+      .week-board {
+        grid-template-columns: repeat(5, minmax(260px, 86vw));
+        overflow-x: auto;
+        padding-bottom: 6px;
+      }
+      .hero-schedule { padding: 14px; }
+      .choice-grid, .choice-grid.three { grid-template-columns: 1fr; }
+      .toolbox { position: relative; top: auto; }
+      .segmented, .quick-actions { justify-content: flex-start; }
+      .toc-card { position: relative; top: auto; }
+      .venue-map { min-height: 520px; }
+      .node.entry { left: 7%; top: 72%; }
+      .node.expo { left: 7%; top: 12%; }
+      .node.halla { left: 53%; top: 12%; }
+      .node.hallc { right: 6%; top: 36%; }
+      .node.strauss { right: 6%; bottom: 10%; }
+      .node.lehar { left: 10%; bottom: 22%; }
+      .date { position: relative; top: auto; }
+      .item { grid-template-columns: 1fr; }
+      .parallel-grid { grid-template-columns: 1fr; }
+      .time-map { overflow-x: auto; }
+      .time-ruler, .time-lane { min-width: 680px; }
+      .nav { position: relative; }
+      .record-jump { right: 12px; bottom: 60px; }
+    }
+
+    @media (max-width: 520px) {
+      .page { padding: 14px 10px 42px; }
+      .hero {
+        min-height: auto;
+        padding: 30px 18px 22px;
+      }
+      h1 { font-size: 32px; line-height: 1.08; }
+      h1 span { font-size: 17px; }
+      h2 { font-size: 23px; }
+      h3 { font-size: 18px; }
+      .hero-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-stat { min-width: 0; }
+      .nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 12px -10px 16px;
+        padding: 9px 10px;
+        scroll-snap-type: x proximity;
+      }
+      .nav::-webkit-scrollbar,
+      .segmented::-webkit-scrollbar,
+      .quick-actions::-webkit-scrollbar,
+      .speaker-grid::-webkit-scrollbar {
+        display: none;
+      }
+      .nav a {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+      }
+      .toolbox {
+        position: sticky;
+        top: 0;
+        z-index: 19;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .searchbox {
+        padding: 7px 9px;
+      }
+      .searchbox input {
+        font-size: 14px;
+      }
+      .segmented,
+      .quick-actions {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2px;
+      }
+      .toolbox button,
+      .record-actions button,
+      .gallery-actions button {
+        min-height: 38px;
+        flex: 0 0 auto;
+      }
+      .primary-timeline,
+      .record-panel,
+      .hero-schedule {
+        padding: 14px;
+      }
+      .master-line {
+        padding-left: 14px;
+        gap: 12px;
+      }
+      .master-line::before {
+        left: 3px;
+      }
+      .master-event {
+        padding: 13px;
+        gap: 8px;
+      }
+      .master-event.must {
+        transform: none;
+      }
+      .master-dot {
+        left: -18px;
+      }
+      .master-event.must .master-dot {
+        left: -20px;
+      }
+      .master-time {
+        font-size: 16px;
+      }
+      .master-event-title .zh-title,
+      .master-event.must .master-event-title .zh-title {
+        font-size: 19px;
+      }
+      .speaker {
+        grid-template-columns: 52px 1fr;
+      }
+      .speaker-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 2px;
+        scroll-snap-type: x proximity;
+      }
+      .speaker-grid .speaker {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+      }
+      .speaker img {
+        width: 52px;
+        height: 52px;
+      }
+      .master-detail .facts {
+        gap: 6px;
+      }
+      .master-detail .fact {
+        padding: 9px;
+      }
+      .links {
+        gap: 6px;
+      }
+      .links a,
+      .master-full-link {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      .upload-box {
+        padding: 14px;
+      }
+      .record-actions,
+      .gallery-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .gallery-actions select {
+        width: 100%;
+      }
+      .dimension-drawer > summary {
+        align-items: flex-start;
+        padding: 13px;
+      }
+      .dimension-drawer > summary:after {
+        flex: 0 0 24px;
+      }
+      .dimension-drawer > .dimension-pack {
+        padding: 0 10px 12px;
+      }
+      .mobile-tip {
+        display: block;
+        margin-top: 8px;
+        color: rgba(255,255,255,.78);
+        font-size: 12px;
+      }
+      .record-jump {
+        right: 10px;
+        bottom: 58px;
+        min-width: 76px;
+        min-height: 38px;
+        padding: 0 12px;
+      }
+      .backtop {
+        right: 10px;
+        bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">ICRA 2026 · Vienna · June 1-5</div>
+        <h1>面向多模态智能与机器人研究的 ICRA 参会路线<span>ICRA Route for Multimodal AI and Robotics Research</span></h1>
+        <p>目标不是把会场跑满，而是最大化你在视觉、机器人学习、空间智能、伺服控制和真实系统部署上的信息增益。</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>5</b><span>天行动路线</span></div>
+          <div class="hero-stat"><b>3</b><span>研究主线</span></div>
+          <div class="hero-stat"><b>12+</b><span>必看节点</span></div>
+          <div class="hero-stat"><b>1</b><span>最终研究问题清单</span></div>
+        </div>
+        <div class="mobile-tip">手机上横向滑动顶部导航和讲者卡片；右下角 Notes 可随时记录现场照片、视频和笔记。</div>
+      </div>
+    </section>
+
+    <nav class="nav">
+      <a href="#primary-timeline">主时间线 Main Timeline</a>
+      <a href="#field-notes" data-open-section="field-notes">现场记录 Field Notes</a>
+      <a href="#dimensionArea">按维度展开 Details</a>
+      <a href="#day0" data-open-section="day0">完整每日明细 Daily Details</a>
+    </nav>
+
+    <section class="toolbox" aria-label="日程搜索与筛选">
+      <label class="searchbox">
+        <span>⌕</span>
+        <input id="scheduleSearch" type="search" placeholder="搜索关键词：VLA / Spatial AI / Hall A1 / 视觉伺服 / Speaker">
+      </label>
+      <div class="segmented" aria-label="优先级筛选">
+        <button type="button" data-priority="all" class="active">全部 All</button>
+        <button type="button" data-priority="must">必去 Must</button>
+        <button type="button" data-priority="core">主线 Core</button>
+        <button type="button" data-priority="alt">备选 Alternative</button>
+        <button type="button" data-priority="net">社交 Networking</button>
+      </div>
+      <div class="quick-actions">
+        <button type="button" id="expandAll">展开 Expand</button>
+        <button type="button" id="collapseAll">折叠 Collapse</button>
+        <button type="button" id="loadImages">加载图片 Load images</button>
+      </div>
+      <div class="result-count" id="resultCount">可搜索主时间线 Main Timeline、日程 Schedule、百科 Wiki 和 Address 地址。</div>
+    </section>
+
+    <section id="primary-timeline" class="primary-timeline">
+      <div class="section-title">
+        <h2>主时间线 Main Timeline</h2>
+        <span class="small">默认按这条线参会；其它信息收在维度抽屉里</span>
+      </div>
+      <div class="timeline-guide">
+        <div class="guide-card"><strong>1. 必去 Must</strong>红色节点是默认路线，标题、时间和 Address 都在一级视图里。</div>
+        <div class="guide-card"><strong>2. 主线 Core</strong>绿色节点用于补论文、找人、工具链和复盘。</div>
+        <div class="guide-card"><strong>3. 备选 Alternative</strong>黄色内容放低一层，只有主线不合适时再展开看。</div>
+      </div>
+      <div id="masterTimeline" class="master-days"></div>
+    </section>
+
+    <section id="field-notes" class="record-panel">
+      <div class="section-title">
+        <h2>现场记录板 Field Notes</h2>
+        <span class="small">本地保存笔记、图片和视频；不上传服务器</span>
+      </div>
+      <div class="recorder-grid">
+        <div class="record-form">
+          <p class="record-hint">现场用法：选日期，写一句标题，贴下问题或结论，再上传照片/视频。右侧会按日期保存，方便会后复盘。</p>
+          <div class="record-row">
+            <label for="recordDay">归档日期 Archive day</label>
+            <select id="recordDay">
+              <option value="6/1 Mon">6/1 Mon · Workshop</option>
+              <option value="6/2 Tue">6/2 Tue · Vision + Data Gap</option>
+              <option value="6/3 Wed">6/3 Wed · Spatial AI</option>
+              <option value="6/4 Thu">6/4 Thu · Foundation Models</option>
+              <option value="6/5 Fri">6/5 Fri · VLA</option>
+              <option value="General">General · 通用记录</option>
+            </select>
+          </div>
+          <div class="record-row">
+            <label for="recordTitle">标题 Title / Session</label>
+            <input id="recordTitle" type="text" placeholder="例如：Keynote 5 后的想法 / 某篇 poster 的作者">
+          </div>
+          <div class="record-row">
+            <label for="recordText">笔记 Notes</label>
+            <textarea id="recordText" placeholder="记录问题、作者、方法亮点、可迁移到显微镜视觉伺服的想法..."></textarea>
+          </div>
+          <div class="record-row">
+            <label for="recordFiles">图片 / 视频 Media</label>
+            <label class="upload-box" for="recordFiles">
+              <strong>选择图片或视频 Upload media</strong>
+              <span>支持多选；保存后会出现在右侧记录列表。</span>
+              <input id="recordFiles" type="file" accept="image/*,video/*" multiple>
+            </label>
+            <span class="source-note">媒体文件保存在本机浏览器 IndexedDB。JSON 导出包含文字、日期和文件名；大视频可能受浏览器存储配额限制。</span>
+          </div>
+          <div class="record-actions">
+            <button class="primary" type="button" id="saveRecord">保存记录 Save</button>
+            <button type="button" id="exportRecords">导出笔记 Export JSON</button>
+          </div>
+          <div class="record-status" id="recordStatus"></div>
+        </div>
+        <div class="record-gallery">
+          <div class="gallery-actions">
+            <select id="recordFilter" aria-label="筛选记录">
+              <option value="all">全部记录 All notes</option>
+              <option value="6/1 Mon">6/1 Mon</option>
+              <option value="6/2 Tue">6/2 Tue</option>
+              <option value="6/3 Wed">6/3 Wed</option>
+              <option value="6/4 Thu">6/4 Thu</option>
+              <option value="6/5 Fri">6/5 Fri</option>
+              <option value="General">General</option>
+            </select>
+            <button type="button" id="refreshRecords">刷新列表 Refresh</button>
+          </div>
+          <div class="record-list" id="recordGallery">
+            <div class="record-card"><p>还没有记录。现场拍照、录视频或写下问题后，会显示在这里。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="week" class="hero-schedule">
+      <div class="section-title">
+        <h2>五天时间总览 Five-Day Overview</h2>
+        <span class="small">最先看这里：红色是默认路线，黄色只是低优先级替代项</span>
+      </div>
+      <div class="logic-strip">
+        <div class="logic-card primary-rule">
+          <strong>默认路线：先跟红色 Must</strong>
+          <span>红色块是你的主路线，除非现场内容明显不合适，否则按它走。</span>
+        </div>
+        <div class="logic-card">
+          <strong>绿色是补充，不抢主线</strong>
+          <span>绿色用于 poster、软件工具、展区和复盘，承担补证据、找人和落地判断。</span>
+        </div>
+        <div class="logic-card backup-rule">
+          <strong>黄色只是替代方案</strong>
+          <span>只有主线听不下去、满场、或临时发现更相关作者时，才切到黄色。</span>
+        </div>
+      </div>
+      <div class="week-board">
+        <div class="day-panel">
+          <h3>6/1 Mon <span>Workshop Day</span></h3>
+          <div class="agenda-chip must primary"><b>09:00<br>17:30</b><span><strong>空间智能与开放世界理解专题</strong><em>MM-Spatial AI Workshop</em>Lehar 3</span></div>
+          <div class="choice-group">
+            <div class="choice-title"><span>同日备选 Alternative Tracks</span><span>按兴趣切换 Switch by interest</span></div>
+            <div class="choice-grid">
+              <div class="agenda-chip alt"><b>Full day</b><span><strong>主动感知：边动边看</strong><em>Active Perception</em>Hall C4</span></div>
+              <div class="agenda-chip alt"><b>Full day</b><span><strong>接触密集操作与控制</strong><em>Contact-Rich Robotics</em>Lehar 2</span></div>
+            </div>
+          </div>
+          <div class="agenda-chip net"><b>18:00<br>20:00</b><span><strong>欢迎酒会</strong><em>Welcome Reception</em>Exhibition Hall</span></div>
+        </div>
+        <div class="day-panel">
+          <h3>6/2 Tue <span>Vision + Data Gap</span></h3>
+          <div class="agenda-chip must primary"><b>09:00<br>10:30</b><span><strong>高速飞行里的视觉闭环学习</strong><em>Learning Agile Vision-Based Quadrotor Flight</em>Strauss 1-2</span></div>
+          <div class="agenda-chip must"><b>11:00<br>12:30</b><span><strong>自动驾驶与机器人导航前沿</strong><em>Autonomous Vehicles & Navigation</em>Hall A1</span></div>
+          <div class="agenda-chip must"><b>14:00<br>14:50</b><span><strong>机器人操作为什么缺大数据</strong><em>Robot Manipulation Data Gap Plenary</em>Hall A1</span></div>
+          <div class="agenda-chip core"><b>15:00<br>16:30</b><span><strong>海报交流与最新结果速览</strong><em>Interactive Session + LBR</em>Hall C</span></div>
+          <div class="choice-group">
+            <div class="choice-title"><span>16:45-18:15 并列备选 Alternatives</span><span>二选一 Choose one</span></div>
+            <div class="choice-grid">
+              <div class="agenda-chip alt"><b>16:45<br>18:15</b><span><strong>控制优化方法论文报告</strong><em>Control and Optimization Oral</em>Hall A2</span></div>
+              <div class="agenda-chip alt"><b>16:45<br>18:15</b><span><strong>医疗机器人前沿报告</strong><em>Medical & Healthcare Robotics Keynote</em>Hall A1</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="day-panel">
+          <h3>6/3 Wed <span>Spatial AI + Embodiment</span></h3>
+          <div class="agenda-chip core"><b>09:00<br>10:30</b><span><strong>自动化 AI 的可信与可持续</strong><em>Sustainable and Trustworthy AI Panel</em>Hall A1</span></div>
+          <div class="agenda-chip must primary"><b>11:00<br>12:30</b><span><strong>空间感知、SLAM 与机器人记忆</strong><em>Robot Perception & Spatial AI</em>Hall A1</span></div>
+          <div class="agenda-chip must"><b>14:00<br>14:50</b><span><strong>低资源、低能耗的机器人设计</strong><em>Frugal and Sustainable Robotics Plenary</em>Hall A1</span></div>
+          <div class="agenda-chip core"><b>15:00<br>16:30</b><span><strong>机器人科研软件工具链</strong><em>Modern Software Tools for Robotics</em>Strauss 1-2</span></div>
+          <div class="agenda-chip must"><b>16:45<br>18:15</b><span><strong>灵巧操作、人形机器人与具身智能</strong><em>Manipulation, Humanoids, Embodied Design</em>Hall A1</span></div>
+        </div>
+        <div class="day-panel">
+          <h3>6/4 Thu <span>Foundation Models</span></h3>
+          <div class="choice-group">
+            <div class="choice-title"><span>09:00-10:30 并列选择 Parallel options</span><span>Poster 优先</span></div>
+            <div class="choice-grid">
+              <div class="agenda-chip core"><b>09:00<br>10:30</b><span><strong>海报交流：找论文作者</strong><em>Interactive Session 5</em>Hall C</span></div>
+              <div class="agenda-chip core"><b>09:00<br>10:30</b><span><strong>产业侧落地经验</strong><em>Industry Keynotes 2</em>Strauss 1-2</span></div>
+            </div>
+          </div>
+          <div class="agenda-chip must primary"><b>11:00<br>12:30</b><span><strong>机器人基础模型与规划学习</strong><em>Robot Learning, Planning & Foundation Models</em>Hall A1</span></div>
+          <div class="agenda-chip must"><b>15:00<br>16:30</b><span><strong>从零搭建机器人行为基础模型</strong><em>Behavior Foundation Models from the Ground Up</em>Strauss 1-2</span></div>
+          <div class="agenda-chip must"><b>16:45<br>18:15</b><span><strong>机器人学习核心论文专场 II</strong><em>Robot Learning II Oral Session</em>Hall A3</span></div>
+        </div>
+        <div class="day-panel">
+          <h3>6/5 Fri <span>VLA Day</span></h3>
+          <div class="agenda-chip must primary"><b>09:00<br>17:30</b><span><strong>VLA 如何真正上机器人</strong><em>From Data to Decisions: VLA Pipelines for Real Robots</em>Hall A1</span></div>
+          <div class="choice-group">
+            <div class="choice-title"><span>同日备选 Alternative Workshops</span><span>内容不合适时切换 Switch if needed</span></div>
+            <div class="choice-grid three">
+              <div class="agenda-chip alt"><b>Full day</b><span><strong>开放世界中的不确定性建模</strong><em>Uncertainty in Open-World Robotics</em>Strauss 1</span></div>
+              <div class="agenda-chip alt"><b>Full day</b><span><strong>给学习系统加几何先验</strong><em>Geometry in Data-Driven Robotics</em>Hall C4</span></div>
+              <div class="agenda-chip alt"><b>Full day</b><span><strong>触觉感知与具身交互</strong><em>RoboTac</em>Hall C6</span></div>
+            </div>
+          </div>
+          <div class="agenda-chip core"><b>17:30+</b><span><strong>复盘：提炼后续研究问题</strong><em>Research Question Debrief</em>输出 3 个后续研究问题</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fit" class="profile">
+      <div class="card">
+        <h2>你的最佳主线 Best-Fit Track</h2>
+        <p>根据你的背景，我把议程按“最可能影响未来科研/企业研究院方向”的权重排序：机器人 foundation model / VLA、空间智能与机器人视觉、视觉伺服与学习控制、真实系统工程、医疗/显微操作的跨域启发。</p>
+        <div class="tagrow">
+          <span class="tag">Robot Learning</span>
+          <span class="tag">VLA / Foundation Models</span>
+          <span class="tag">Spatial AI / SLAM</span>
+          <span class="tag">Visual Servoing</span>
+          <span class="tag">Sim-to-Real</span>
+          <span class="tag">Manipulation</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>优先级标记</h3>
+        <div class="legend">
+          <span class="pill must"><span class="dot"></span>必去 Must</span>
+          <span class="pill core"><span class="dot"></span>主线 Core</span>
+          <span class="pill alt"><span class="dot"></span>备选 Alternative</span>
+          <span class="pill net"><span class="dot"></span>社交/展区 Networking</span>
+        </div>
+        <p class="small">如果同一时段冲突，默认选择更“前沿视野 + 可迁移到你研究方向”的 session；具体论文用 poster/interactive 补齐。</p>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="section-title">
+        <h2>一眼总览 Overview</h2>
+        <span class="small">Address 地址：VIECON - Vienna Congress & Convention Center, Messeplatz 1, 1020 Vienna, Austria</span>
+      </div>
+      <div class="grid three">
+        <div class="card"><h3>6/1 Workshop</h3><p>主攻 Multi-Modal Spatial AI。把它当作你进入机器人空间智能/开放世界理解圈子的入口。</p></div>
+        <div class="card"><h3>6/2-6/4 主会</h3><p>Keynote 是骨架，poster/interactive 是找人和找 idea 的主战场。每天只保留 1-2 个硬核 oral 备选。</p></div>
+        <div class="card"><h3>6/5 Workshop</h3><p>主攻 VLA Pipelines for Real Robots。它最贴近“多模态智能 + 真实机器人部署”的企业研究院方向。</p></div>
+      </div>
+    </section>
+
+    <section id="routes">
+      <div class="section-title">
+        <h2>路线图 Route Map</h2>
+        <span class="small">Address 地址：VIECON - Vienna Congress & Convention Center, Messeplatz 1, 1020 Vienna, Austria</span>
+      </div>
+      <div class="route-board">
+        <div class="venue-map">
+          <div class="map-title">
+            <span>VIECON 高频动线 Frequent Route</span>
+            <span class="small">入口 Entrance / 主会 Plenary / 海报 Poster / Workshop</span>
+          </div>
+          <div class="route-curve a"></div>
+          <div class="route-curve b"></div>
+          <div class="route-curve c"></div>
+          <div class="route-curve d"></div>
+          <div class="node entry">Foyer A<small>注册 / 入场</small></div>
+          <div class="node halla">Hall A1<small>Keynote / Plenary</small></div>
+          <div class="node hallc">Hall C<small>Interactive / Poster</small></div>
+          <div class="node strauss">Strauss 1-2<small>Tutorial</small></div>
+          <div class="node lehar">Lehar / Hall A3<small>Oral / Workshop</small></div>
+          <div class="node expo">Exhibition Hall<small>午饭 / 展区 / 社交</small></div>
+        </div>
+        <div class="route-lanes">
+          <div class="lane red">
+            <strong>研究路线 A：多模态空间智能</strong>
+            6/1 MM-Spatial AI → 6/3 Robot Perception & Spatial AI → 6/4 Robot Perception II → 6/5 Uncertainty / Geometry 备选。
+          </div>
+          <div class="lane blue">
+            <strong>研究路线 B：Robot Learning / VLA</strong>
+            6/2 Ken Goldberg → 6/3 Generalist Humanoids → 6/4 Foundation Models → 6/5 VLA Pipelines for Real Robots。
+          </div>
+          <div class="lane gold">
+            <strong>研究路线 C：视觉伺服与控制</strong>
+            6/2 Vision-Based Quadrotor Flight → Control & Optimization → 6/4 Generative Predictive Control / GP3。
+          </div>
+          <div class="lane">
+            <strong>现实路线：少跑，多问</strong>
+            Keynote 坐 Hall A1；poster 固定去 Hall C；workshop 在 Lehar / Hall A1；每天最多主动深聊 3 个作者。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="decision">
+      <div class="section-title">
+        <h2>冲突取舍矩阵 Conflict Matrix</h2>
+        <span class="small">同一时段冲突时，用这个排序</span>
+      </div>
+      <div class="matrix">
+        <div class="card">
+          <span class="score">最高优先</span>
+          <h3>Foundation / VLA</h3>
+          <p>优先听能解释“真实机器人为什么还没 ChatGPT 化”的报告和 workshop。</p>
+        </div>
+        <div class="card">
+          <span class="score">高优先</span>
+          <h3>Spatial AI / Perception</h3>
+          <p>优先看几何 foundation model、3D memory、open-world understanding、active perception。</p>
+        </div>
+        <div class="card">
+          <span class="score">中高优先</span>
+          <h3>Visual Servo / Control</h3>
+          <p>选择把 learning 和 MPC、CBF、MPPI、闭环反馈真正接起来的论文。</p>
+        </div>
+        <div class="card">
+          <span class="score">选择性补课</span>
+          <h3>Mechanism / Hardware</h3>
+          <p>不主攻机构，但要听懂身体结构如何限制/放大智能，尤其是 medical 和 humanoid。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="section-title">
+        <h2>术语中英对照 Bilingual Glossary</h2>
+        <span class="small">除人名外，现场常见议程词和研究词的快速翻译</span>
+      </div>
+      <div class="term-grid">
+        <div class="term"><strong>方向性前沿报告</strong><em>Keynote</em><span>不是普通论文报告，更像一个方向的趋势判断和问题框架。</span></div>
+        <div class="term"><strong>全会级大会报告</strong><em>Plenary</em><span>面向全体参会者，通常讨论领域级大问题和长期判断。</span></div>
+        <div class="term"><strong>专题教程</strong><em>Keynote Tutorial</em><span>更偏方法脉络、工具链和上手路径，适合系统补课。</span></div>
+        <div class="term"><strong>研讨会</strong><em>Workshop</em><span>围绕一个前沿子方向展开，最适合认识圈内人和找合作。</span></div>
+        <div class="term"><strong>常规报告场</strong><em>Regular Session</em><span>正式论文 oral 分会场，适合追具体方法和实验细节。</span></div>
+        <div class="term"><strong>交互展示</strong><em>Interactive / Poster</em><span>作者站在海报前交流，适合问失败案例、代码、数据和复现问题。</span></div>
+        <div class="term"><strong>晚近突破结果</strong><em>Late Breaking Results, LBR</em><span>更新、更短、更探索性的结果，适合捕捉正在形成的新方向。</span></div>
+        <div class="term"><strong>视觉-语言-动作模型</strong><em>Vision-Language-Action, VLA</em><span>把视觉、语言指令和机器人动作连接起来的模型范式。</span></div>
+        <div class="term"><strong>基础模型</strong><em>Foundation Model</em><span>大规模预训练后迁移到多任务的模型；机器人里关键是如何接动作和反馈。</span></div>
+        <div class="term"><strong>空间智能</strong><em>Spatial AI</em><span>机器理解三维空间、地图、记忆、导航和场景语义的能力。</span></div>
+        <div class="term"><strong>视觉伺服</strong><em>Visual Servoing</em><span>用视觉反馈闭环控制机器人运动；你现有背景最容易迁移的传统强项。</span></div>
+        <div class="term"><strong>仿真到真实</strong><em>Sim-to-Real</em><span>把仿真中训练或验证的方法迁移到真实硬件时面对的误差问题。</span></div>
+        <div class="term"><strong>主动感知</strong><em>Active Perception</em><span>机器人主动移动相机或身体来减少不确定性，而不是被动看图。</span></div>
+        <div class="term"><strong>开放世界理解</strong><em>Open-World Understanding</em><span>系统面对训练集中没见过的物体、场景和任务时仍能推理。</span></div>
+        <div class="term"><strong>几何归纳偏置</strong><em>Geometric Inductive Bias</em><span>把三维几何、对称性或物理约束写进学习系统，减少纯数据依赖。</span></div>
+        <div class="term"><strong>动作表示</strong><em>Action Representation</em><span>VLA/robot learning 中如何表达连续控制、末端位姿、夹爪和时间序列。</span></div>
+      </div>
+    </section>
+
+    <section id="wiki">
+      <div class="section-title">
+        <h2>参会百科索引 Conference Wiki</h2>
+        <span class="small">一级行程保持简洁，详细人物、位置、链接放在这里</span>
+      </div>
+      <div class="card">
+        <h3>使用方式</h3>
+        <p>每个重点日程卡片先给出时间 Time、Address 地址、讲者 Speaker 和类型 Type；点击“展开百科 Expand wiki”可查看讲者照片、官方主页、联系方式或官方入口。更完整的人物表、会场动线和 workshop 链接放在本索引里，适合现场快速查人、查地点、查该问什么。</p>
+        <p class="source-note">联系方式只收录官方页面或个人主页明确提供的入口；没有公开邮箱时使用主页、实验室页或官方活动页，避免误填。</p>
+      </div>
+      <div class="encyclopedia">
+        <aside class="toc-card">
+          <strong>快速跳转</strong>
+          <a href="#wiki-venue">会场与交通</a>
+          <a href="#wiki-mmspatial">6/1 MM-Spatial AI Workshop</a>
+          <a href="#wiki-kt1">6/2 Vision-Based Flight Tutorial</a>
+          <a href="#wiki-k1">6/2 Navigation Keynote</a>
+          <a href="#wiki-plenary">三场 Plenary</a>
+          <a href="#wiki-k3">6/3 Spatial AI Keynote</a>
+          <a href="#wiki-k4">6/3 Manipulation / Humanoid Keynote</a>
+          <a href="#wiki-k5">6/4 Foundation Models Keynote</a>
+          <a href="#wiki-kt4">6/4 Behavior Foundation Models Tutorial</a>
+          <a href="#wiki-vla">6/5 VLA Workshop</a>
+        </aside>
+        <div class="wiki-list">
+          <details class="wiki" id="wiki-venue" open>
+            <summary>会场与交通：VIECON / Messe Wien</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>地址</b>VIECON / Messe Wien, Messeplatz 1, 1020 Vienna</div>
+                <div class="fact"><b>公共交通</b>官方说明可通过地铁 U2 到达</div>
+                <div class="fact"><b>高频区域</b>Foyer A, Hall A1, Hall C, Hall A3, Strauss 1-2, Lehar</div>
+              </div>
+              <p>你的默认动线：Foyer A 注册/入场，Hall A1 听 keynote 和 plenary，Hall C 扫 interactive 和 LBR，Strauss 1-2 听 tutorial，Hall A3 / Lehar 负责 oral 和 workshop 切换。</p>
+              <div class="links">
+                <a href="https://2026.ieee-icra.org/attend/conference-center-fandb-onsite/">官方会场与餐饮信息</a>
+                <a href="https://2026.ieee-icra.org/program/">官方 Program</a>
+                <a href="https://ras.papercept.net/conferences/conferences/ICRA26/program/">PaperCept 详细日程</a>
+              </div>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-mmspatial">
+            <summary>6/1 MM-Spatial AI Workshop：多模态空间智能入口</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>时间</b>Mon June 1, 09:00-17:30</div>
+                <div class="fact"><b>地点</b>Lehar 3</div>
+                <div class="fact"><b>官方联系</b>xingxing.zuo@mbzuai.ac.ae</div>
+              </div>
+              <p>主题覆盖 multi-modal fusion、robust SLAM、open-vocabulary 3D scene understanding、foundation model-enabled SLAM、online continual learning。它是你当天最应该深扎的 workshop。</p>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Ayoung-Kim.jpg" alt="Ayoung Kim"><div><strong>Ayoung Kim</strong><span>Organizer / keynote circle, SNU</span><a href="https://rpm.snu.ac.kr/">Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Timothy-Barfoot.jpg" alt="Timothy Barfoot"><div><strong>Timothy Barfoot</strong><span>Keynote speaker, U Toronto</span><a href="https://asrl.utias.utoronto.ca/~tdb/">Profile</a></div></div>
+                <div class="speaker"><img src="https://xingxingzuo.github.io/images/me.jpg" alt="Xingxing Zuo"><div><strong>Xingxing Zuo</strong><span>Organizer, MBZUAI</span><a href="https://xingxingzuo.github.io/">Homepage</a></div></div>
+              </div>
+              <div class="links">
+                <a href="https://xingxingzuo.github.io/MM-SpatialAI/">Workshop 官网</a>
+                <a href="https://openreview.net/group?id=IEEE.org%2FICRA%2F2026%2FWorkshop%2FMM-SpatialAI">OpenReview</a>
+              </div>
+              <p class="source-note">Workshop 页面列出 keynote speakers 和 organizers；有些 organizer 的头像来自其个人主页，不属于 ICRA 官方头像。</p>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-kt1">
+            <summary>6/2 Keynote Tutorial 1：Learning Agile Vision-Based Quadrotor Flight</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>时间</b>Tue June 2, 09:00-10:30</div>
+                <div class="fact"><b>地点</b>VIECON, Strauss 1-2</div>
+                <div class="fact"><b>形式</b>90 min hands-on keynote tutorial</div>
+              </div>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/davide.png" alt="Davide Scaramuzza"><div><strong>Davide Scaramuzza</strong><span>University of Zurich</span><a href="https://rpg.ifi.uzh.ch/">RPG Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/rudolf-reiter.png" alt="Rudolf Reiter"><div><strong>Rudolf Reiter</strong><span>Postdoc, RPG group</span><a href="https://rpg.ifi.uzh.ch/">Group</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/eles.png" alt="Ismail Geles"><div><strong>Ismail Geles</strong><span>PhD student, RPG group</span><a href="https://rpg.ifi.uzh.ch/">Group</a></div></div>
+              </div>
+              <p>关键词：event camera、visual-inertial state estimation、RL for agile flight、low-latency perception。你可以重点问：视觉伺服中 latency、state estimation uncertainty、policy update rate 如何共同决定闭环稳定性。</p>
+              <div class="links"><a href="https://2026.ieee-icra.org/attend/keynote-tutorials/">官方 Keynote Tutorials</a></div>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-k1">
+            <summary>6/2 Keynote 1：Autonomous Vehicles & Navigation</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>时间</b>Tue June 2, 11:00-12:30</div>
+                <div class="fact"><b>地点</b>Hall A1 (Plenary)</div>
+                <div class="fact"><b>主题</b>Navigation, embodied AI, scene understanding</div>
+              </div>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2025/10/Johannes-Betz.png" alt="Johannes Betz"><div><strong>Johannes Betz</strong><span>TU Munich</span><a href="https://www.mos.ed.tum.de/avs/home/">AVS</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Michael-Milford.jpg" alt="Michael Milford"><div><strong>Michael Milford</strong><span>QUT Centre for Robotics</span><a href="https://research.qut.edu.au/qcr/">QCR</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Aniket-Bera.png" alt="Aniket Bera"><div><strong>Aniket Bera</strong><span>Purdue University</span><a href="http://ideas.cs.purdue.edu/">IDEAS Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Hesheng-Wang.jpg" alt="Hesheng Wang"><div><strong>Hesheng Wang</strong><span>Shanghai Jiao Tong University</span><a href="https://irmv.sjtu.edu.cn/wanghesheng">Profile</a></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-plenary">
+            <summary>三场 Plenary：机器人研究的大问题</summary>
+            <div class="wiki-body">
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Ken_Goldberg_Plenary1.jpg" alt="Ken Goldberg"><div><strong>Ken Goldberg</strong><span>June 2, 14:00-14:50, Hall A1</span><a href="http://goldberg.berkeley.edu/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Barbara-Mazzolai-3-901x1024.jpg" alt="Barbara Mazzolai"><div><strong>Barbara Mazzolai</strong><span>June 3, 14:00-14:50, Hall A1</span><a href="https://www.iit.it/people-details/-/people/barbara-mazzolai">Profile</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Roland-Siegwart-2-912x1024.jpg" alt="Roland Siegwart"><div><strong>Roland Siegwart</strong><span>June 4, 14:00-14:50, Hall A1</span><a href="https://asl.ethz.ch/">ASL</a></div></div>
+              </div>
+              <p>Ken Goldberg 讲 manipulation data gap 和 Code-as-Policy；Barbara Mazzolai 讲生物启发、节能、身体结构；Roland Siegwart 讲 aerial robots 从自主导航到高空物理交互。</p>
+              <div class="links"><a href="https://2026.ieee-icra.org/attend/plenary-sessions/">官方 Plenary Sessions</a></div>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-k3">
+            <summary>6/3 Keynote 3：Robot Perception & Spatial AI</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>时间</b>Wed June 3, 11:00-12:30</div>
+                <div class="fact"><b>地点</b>Hall A1 (Plenary)</div>
+                <div class="fact"><b>你要听什么</b>Thermal/Radar, geometric foundation models, memory, active perception</div>
+              </div>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Ayoung-Kim.jpg" alt="Ayoung Kim"><div><strong>Ayoung Kim</strong><span>SNU RPM Lab</span><a href="https://rpm.snu.ac.kr/">Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Luca-Carlone.jpg" alt="Luca Carlone"><div><strong>Luca Carlone</strong><span>MIT</span><a href="https://lucacarlone.mit.edu/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Maren-Bennewitz.jpg" alt="Maren Bennewitz"><div><strong>Maren Bennewitz</strong><span>University of Bonn</span><a href="https://www.hrl.uni-bonn.de/">HRL</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Timothy-Barfoot.jpg" alt="Timothy Barfoot"><div><strong>Timothy Barfoot</strong><span>University of Toronto</span><a href="https://asrl.utias.utoronto.ca/~tdb/">Profile</a></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-k4">
+            <summary>6/3 Keynote 4：Manipulation, Humanoids, Embodied Design</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>时间</b>Wed June 3, 16:45-18:15</div>
+                <div class="fact"><b>地点</b>Hall A1 (Plenary)</div>
+                <div class="fact"><b>核心问题</b>Data, dexterity, embodiment, generalist robots</div>
+              </div>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Jeannette-Bohg.png" alt="Jeannette Bohg"><div><strong>Jeannette Bohg</strong><span>Stanford</span><a href="https://iprl.stanford.edu/">IPRL</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Kento-Kawaharazuka.png" alt="Kento Kawaharazuka"><div><strong>Kento Kawaharazuka</strong><span>University of Tokyo</span><a href="https://haraduka.github.io/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Nikos-Tsagarakis.jpg" alt="Nikos Tsagarakis"><div><strong>Nikos Tsagarakis</strong><span>IIT</span><a href="https://hhcm.iit.it/">HHCM</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Yuke-Zhu.jpg" alt="Yuke Zhu"><div><strong>Yuke Zhu</strong><span>UT Austin / NVIDIA</span><a href="https://yukezhu.me/">Homepage</a></div></div>
+              </div>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-k5">
+            <summary>6/4 Keynote 5：Robot Learning, Planning & Foundation Models</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>时间</b>Thu June 4, 11:00-12:30</div>
+                <div class="fact"><b>地点</b>Hall A1 (Plenary)</div>
+                <div class="fact"><b>优先级</b>全会最高之一</div>
+              </div>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/David-Hsu.jpg" alt="David Hsu"><div><strong>David Hsu</strong><span>NUS / NVIDIA Research</span><a href="https://adacomp.org/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Stefanie-Tellex.jpg" alt="Stefanie Tellex"><div><strong>Stefanie Tellex</strong><span>Brown University</span><a href="https://h2r.cs.brown.edu/">H2R Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Noemie-Jaquier.jpg" alt="Noémie Jaquier"><div><strong>Noémie Jaquier</strong><span>KTH</span><a href="https://njaquier.ch/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Paolo-Robuffo-Giordano.jpg" alt="Paolo Robuffo Giordano"><div><strong>Paolo Robuffo Giordano</strong><span>IRISA Rennes</span><a href="https://team.inria.fr/rainbow/team/prg/">Profile</a></div></div>
+              </div>
+              <p>你重点听四件事：LLM + planning 如何互补，language in partial observability，geometric inductive bias，robust learning/control 如何打 sim-to-real。</p>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-kt4">
+            <summary>6/4 Keynote Tutorial 4：Behavior Foundation Models from the Ground Up</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>时间</b>Thu June 4, 15:00-16:30</div>
+                <div class="fact"><b>地点</b>Strauss 1-2</div>
+                <div class="fact"><b>Speaker</b>Rudolf Lioutikov</div>
+              </div>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Rudolf-Lioutikov.png" alt="Rudolf Lioutikov"><div><strong>Rudolf Lioutikov</strong><span>KIT, Intuitive Robots Lab</span><a href="https://www.intuitive-robots.net/">Lab</a></div></div>
+              </div>
+              <p>官方简介强调从 LLM 到 VLM/VLA，再到 behavior foundation models，重点在 action representation、spatio-temporal reasoning、observation/task conditioning。非常适合你以后做多模态智能和真实机器人策略。</p>
+              <div class="links">
+                <a href="https://intuitive-robots.github.io/bfm-ground-up/">Tutorial 项目页</a>
+                <a href="https://2026.ieee-icra.org/attend/keynote-tutorials/">官方 Keynote Tutorials</a>
+              </div>
+            </div>
+          </details>
+
+          <details class="wiki" id="wiki-vla">
+            <summary>6/5 From Data to Decisions：VLA Pipelines for Real Robots</summary>
+            <div class="wiki-body">
+              <div class="facts">
+                <div class="fact"><b>时间</b>Fri June 5, 09:00-17:30</div>
+                <div class="fact"><b>地点</b>Hall A1</div>
+                <div class="fact"><b>联系</b>icra2026vlapipeline@gmail.com</div>
+              </div>
+              <p>这是收官主线。建议你把问题集中在：VLA 如何收数据、如何 fine-tune、如何接真实机器人频率、如何处理 temporal consistency 和 action representation。</p>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://icra2026vlapipeline.github.io/images/shuran.jpg" alt="Shuran Song"><div><strong>Shuran Song</strong><span>Stanford University</span><a href="https://shurans.github.io/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://icra2026vlapipeline.github.io/images/masha.jpg" alt="Masha Itkina"><div><strong>Masha Itkina</strong><span>Toyota Research Institute</span><a href="https://mashaitkina.weebly.com/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://icra2026vlapipeline.github.io/images/alberto.jpg" alt="Alberto Rodriguez"><div><strong>Alberto Rodriguez</strong><span>Boston Dynamics</span><a href="https://scholar.google.com/citations?user=U7w5r3gAAAAJ">Scholar</a></div></div>
+                <div class="speaker"><img src="https://icra2026vlapipeline.github.io/images/karl.webp" alt="Karl Pertsch"><div><strong>Karl Pertsch</strong><span>Physical Intelligence</span><a href="https://kpertsch.github.io/">Homepage</a></div></div>
+              </div>
+              <div class="links">
+                <a href="https://icra2026vlapipeline.github.io/">Workshop 官网</a>
+                <a href="https://2026.ieee-icra.org/workshops-and-tutorials/">官方 Workshop 列表</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="day0" class="day">
+      <aside class="date">
+        <div class="dow">Sunday</div>
+        <div class="num">May 31</div>
+        <div class="theme">抵达与预热</div>
+      </aside>
+      <div class="timeline">
+        <div class="route-strip">
+          <span class="route-step">机场 / 酒店</span><span class="arrow">→</span>
+          <span class="route-step">U2: Messe-Prater</span><span class="arrow">→</span>
+          <span class="route-step">Foyer A 注册</span><span class="arrow">→</span>
+          <span class="route-step">会场踩点</span>
+        </div>
+        <article class="item net">
+          <div class="time">15:00-19:00</div>
+          <div>
+            <div class="title">注册，熟悉 VIECON 会场</div>
+            <div class="meta">Foyer A</div>
+            <div class="why">把 Hall A、Hall C、Strauss 1-2、Lehar 区域走一遍。后面几天你会在 keynote、poster、workshop 之间快速切换。</div>
+          </div>
+        </article>
+        <article class="item alt">
+          <div class="time">晚上</div>
+          <div>
+            <div class="title">整理 10 个想问的问题</div>
+            <div class="why">建议围绕：VLA 数据效率、空间记忆、仿真到真实、视觉伺服闭环、机器人评测是否被 benchmark 带偏。</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="day1" class="day">
+      <aside class="date">
+        <div class="dow">Monday</div>
+        <div class="num">June 1</div>
+        <div class="theme">Workshop 深潜</div>
+      </aside>
+      <div class="timeline">
+        <div class="route-strip">
+          <span class="route-step">Foyer A</span><span class="arrow">→</span>
+          <span class="route-step">Lehar 3</span><span class="arrow">→</span>
+          <span class="route-step">Hall C4 / Lehar 2 备选</span><span class="arrow">→</span>
+          <span class="route-step">Exhibition Hall Reception</span>
+        </div>
+        <article class="item must">
+          <div class="time">09:00-17:30</div>
+          <div>
+            <div class="title">MM-Spatial AI: Multi-Modal Spatial AI for Robust Navigation and Open-World Understanding</div>
+            <div class="meta">Full day · Lehar 3</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Mon June 1, 09:00-17:30</div>
+              <div class="fact"><b>地点</b>Lehar 3</div>
+              <div class="fact"><b>联系</b>xingxing.zuo@mbzuai.ac.ae</div>
+            </div>
+            <div class="why">与你的多模态智能、视觉、机器人学背景高度重合。核心价值是把 vision foundation model、3D/SLAM、开放世界理解和导航放到同一张图里。</div>
+            <details class="more">
+              <summary>展开百科：人物 / 官网 / 你该问什么</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Ayoung-Kim.jpg" alt="Ayoung Kim"><div><strong>Ayoung Kim</strong><span>SNU RPM Lab</span><a href="https://rpm.snu.ac.kr/">Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Timothy-Barfoot.jpg" alt="Timothy Barfoot"><div><strong>Timothy Barfoot</strong><span>U Toronto ASRL</span><a href="https://asrl.utias.utoronto.ca/~tdb/">Profile</a></div></div>
+                <div class="speaker"><img src="https://xingxingzuo.github.io/images/me.jpg" alt="Xingxing Zuo"><div><strong>Xingxing Zuo</strong><span>Organizer, MBZUAI</span><a href="https://xingxingzuo.github.io/">Homepage</a></div></div>
+              </div>
+              <p>建议追问：foundation model 在 SLAM/3D memory 里到底解决了什么，和传统几何前端/后端如何分工；开放词汇理解怎样进入闭环导航。</p>
+              <div class="links"><a href="#wiki-mmspatial">本页百科</a><a href="https://xingxingzuo.github.io/MM-SpatialAI/">Workshop 官网</a><a href="https://openreview.net/group?id=IEEE.org%2FICRA%2F2026%2FWorkshop%2FMM-SpatialAI">OpenReview</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item alt">
+          <div class="time">同日备选</div>
+          <div>
+            <div class="title">如果想转向操作/伺服：Active Perception 或 Contact-Rich Robotics</div>
+            <div class="meta">Act to Sense to Act Better · Hall C4 / Generalizable Contact-Rich Robotics · Lehar 2</div>
+            <div class="why">前者偏视觉主动感知与 manipulation，后者偏接触丰富任务中的 representation + control；适合你的显微镜视觉伺服项目迁移思考。</div>
+          </div>
+        </article>
+        <article class="item net">
+          <div class="time">18:00-20:00</div>
+          <div>
+            <div class="title">Welcome Reception</div>
+            <div class="meta">Exhibition Hall</div>
+            <div class="why">目标不是寒暄，而是找 3 类人：做 VLA/robot learning 的博士生、做空间智能/SLAM 的 PI、做真实机器人系统的工业研究员。</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="day2" class="day">
+      <aside class="date">
+        <div class="dow">Tuesday</div>
+        <div class="num">June 2</div>
+        <div class="theme">视觉飞行 + 数据鸿沟</div>
+      </aside>
+      <div class="timeline">
+        <div class="route-strip">
+          <span class="route-step">Strauss 1-2</span><span class="arrow">→</span>
+          <span class="route-step">Hall A1</span><span class="arrow">→</span>
+          <span class="route-step">Hall C Poster</span><span class="arrow">→</span>
+          <span class="route-step">Hall A3 / Hall A1 晚场二选一</span>
+        </div>
+        <article class="item must">
+          <div class="time">09:00-10:30</div>
+          <div>
+            <div class="title">Keynote Tutorial 1: Learning Agile Vision-Based Quadrotor Flight</div>
+            <div class="meta">Strauss 1-2</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Tue June 2, 09:00-10:30</div>
+              <div class="fact"><b>地点</b>Strauss 1-2</div>
+              <div class="fact"><b>讲者</b>Davide Scaramuzza, Rudolf Reiter, Ismail Geles</div>
+            </div>
+            <div class="why">这是视觉闭环控制、sim-to-real、快速动态系统的高密度入口。即使你不做无人机，方法论对视觉伺服很有迁移价值。</div>
+            <details class="more">
+              <summary>展开百科：讲者长相 / 主页 / 迁移点</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/davide.png" alt="Davide Scaramuzza"><div><strong>Davide Scaramuzza</strong><span>University of Zurich</span><a href="https://rpg.ifi.uzh.ch/">RPG Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/rudolf-reiter.png" alt="Rudolf Reiter"><div><strong>Rudolf Reiter</strong><span>RPG group</span><a href="https://rpg.ifi.uzh.ch/">Group</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/eles.png" alt="Ismail Geles"><div><strong>Ismail Geles</strong><span>RPG group</span><a href="https://rpg.ifi.uzh.ch/">Group</a></div></div>
+              </div>
+              <p>迁移点：低延迟视觉、event camera、视觉惯性状态估计、RL policy 的闭环频率，这些都能迁移到显微镜视觉伺服。</p>
+              <div class="links"><a href="#wiki-kt1">本页百科</a><a href="https://2026.ieee-icra.org/attend/keynote-tutorials/">官方 Tutorial</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item must">
+          <div class="time">11:00-12:30</div>
+          <div>
+            <div class="title">Keynote 1: Autonomous Vehicles & Navigation</div>
+            <div class="meta">Hall A1 · Johannes Betz, Michael Milford, Aniket Bera, Hesheng Wang</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Tue June 2, 11:00-12:30</div>
+              <div class="fact"><b>地点</b>Hall A1</div>
+              <div class="fact"><b>主题</b>Navigation, embodied AI, scene understanding</div>
+            </div>
+            <div class="why">关注“感知-预测-规划-动作”的完整 autonomy stack。Hesheng Wang 的 scene understanding 到 decision making 尤其贴合你的视觉与学习背景。</div>
+            <details class="more">
+              <summary>展开百科：四位讲者与官方入口</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2025/10/Johannes-Betz.png" alt="Johannes Betz"><div><strong>Johannes Betz</strong><span>TU Munich</span><a href="https://www.mos.ed.tum.de/avs/home/">AVS</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Michael-Milford.jpg" alt="Michael Milford"><div><strong>Michael Milford</strong><span>QUT Centre for Robotics</span><a href="https://research.qut.edu.au/qcr/">QCR</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Aniket-Bera.png" alt="Aniket Bera"><div><strong>Aniket Bera</strong><span>Purdue IDEAS Lab</span><a href="http://ideas.cs.purdue.edu/">Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Hesheng-Wang.jpg" alt="Hesheng Wang"><div><strong>Hesheng Wang</strong><span>SJTU</span><a href="https://irmv.sjtu.edu.cn/wanghesheng">Profile</a></div></div>
+              </div>
+              <div class="links"><a href="#wiki-k1">本页百科</a><a href="https://2026.ieee-icra.org/program/keynote-sessions/">官方 Keynotes</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item must">
+          <div class="time">14:00-14:50</div>
+          <div>
+            <div class="title">Plenary: Ken Goldberg - Robot Manipulation 的 100,000-year Data Gap</div>
+            <div class="meta">Hall A1</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Tue June 2, 14:00-14:50</div>
+              <div class="fact"><b>地点</b>Hall A1</div>
+              <div class="fact"><b>讲者</b>Ken Goldberg, UC Berkeley</div>
+            </div>
+            <div class="why">这是当天最值得听的战略性报告：机器人为什么没有互联网规模数据，GOFE、Code-as-Policy、VLM perception 如何结合真实生产自动化。</div>
+            <details class="more">
+              <summary>展开百科：讲者 / 关键问题</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Ken_Goldberg_Plenary1.jpg" alt="Ken Goldberg"><div><strong>Ken Goldberg</strong><span>UC Berkeley</span><a href="http://goldberg.berkeley.edu/">Homepage</a></div></div>
+              </div>
+              <p>重点听：数据缺口、GOFE、Code-as-Policy、VLM perception 如何被真实工业任务约束。</p>
+              <div class="links"><a href="#wiki-plenary">本页百科</a><a href="https://2026.ieee-icra.org/attend/plenary-sessions/">官方 Plenary</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item core">
+          <div class="time">15:00-16:30</div>
+          <div>
+            <div class="title">Interactive Session 2 + Late Breaking Results</div>
+            <div class="meta">Hall C</div>
+            <div class="why">建议用关键词扫 poster：visual servoing、robot learning、VLM/VLA、sim-to-real、deformable manipulation、foundation model。</div>
+          </div>
+        </article>
+        <article class="item alt">
+          <div class="time">16:45-18:15</div>
+          <div>
+            <div class="title">备选 A：Regular Session - Control and Optimization</div>
+            <div class="meta">TuBT2 · Hall A2</div>
+            <div class="why">如果你想补经典控制与学习控制交界，这是比 Medical keynote 更硬核的选择。</div>
+            <ul class="papers">
+              <li>Limiting Kinetic Energy through Control Barrier Functions</li>
+              <li>Infinite-Horizon Value Function Approximation for MPC</li>
+              <li>PRED-MPPI for robust quadrotor tracking control</li>
+            </ul>
+          </div>
+        </article>
+        <article class="item alt">
+          <div class="time">16:45-18:15</div>
+          <div>
+            <div class="title">备选 B：Keynote 2 - Medical & Healthcare Robotics</div>
+            <div class="meta">Hall A1</div>
+            <div class="why">如果想从医疗/显微操作获取灵感，重点听 Tiantian Xu 的磁驱微机器人与 RL trajectory tracking。</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="day3" class="day">
+      <aside class="date">
+        <div class="dow">Wednesday</div>
+        <div class="num">June 3</div>
+        <div class="theme">Spatial AI + Generalist Robots</div>
+      </aside>
+      <div class="timeline">
+        <div class="route-strip">
+          <span class="route-step">Hall A1 / Hall C</span><span class="arrow">→</span>
+          <span class="route-step">Hall A1 Spatial AI</span><span class="arrow">→</span>
+          <span class="route-step">Strauss 1-2 软件工具</span><span class="arrow">→</span>
+          <span class="route-step">Hall A1 Generalist Robots</span>
+        </div>
+        <article class="item core">
+          <div class="time">09:00-10:30</div>
+          <div>
+            <div class="title">Panel 3: Sustainable and Trustworthy AI for Automation</div>
+            <div class="meta">Hall A1</div>
+            <div class="why">企业研究院视角值得听：可靠性、治理、能耗、部署可信度。若更想看论文，则去 Interactive Session 3。</div>
+          </div>
+        </article>
+        <article class="item must">
+          <div class="time">11:00-12:30</div>
+          <div>
+            <div class="title">Keynote 3: Robot Perception & Spatial AI</div>
+            <div class="meta">Hall A1 · Ayoung Kim, Luca Carlone, Maren Bennewitz, Timothy Barfoot</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Wed June 3, 11:00-12:30</div>
+              <div class="fact"><b>地点</b>Hall A1</div>
+              <div class="fact"><b>关键词</b>Spatial AI, SLAM, memory, active perception</div>
+            </div>
+            <div class="why">必去。热成像/雷达、多模态 SLAM、geometric foundation models、language-enabled memory、active perception 都在你的核心兴趣区。</div>
+            <details class="more">
+              <summary>展开百科：讲者长相 / 主页 / 追问方向</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Ayoung-Kim.jpg" alt="Ayoung Kim"><div><strong>Ayoung Kim</strong><span>SNU RPM Lab</span><a href="https://rpm.snu.ac.kr/">Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Luca-Carlone.jpg" alt="Luca Carlone"><div><strong>Luca Carlone</strong><span>MIT</span><a href="https://lucacarlone.mit.edu/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Maren-Bennewitz.jpg" alt="Maren Bennewitz"><div><strong>Maren Bennewitz</strong><span>University of Bonn</span><a href="https://www.hrl.uni-bonn.de/">HRL</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Timothy-Barfoot.jpg" alt="Timothy Barfoot"><div><strong>Timothy Barfoot</strong><span>University of Toronto</span><a href="https://asrl.utias.utoronto.ca/~tdb/">Profile</a></div></div>
+              </div>
+              <p>建议追问：foundation model 和 SLAM 后端如何组合；language memory 是否会破坏长期一致性；active perception 如何进入实时闭环。</p>
+              <div class="links"><a href="#wiki-k3">本页百科</a><a href="https://2026.ieee-icra.org/program/keynote-sessions/">官方 Keynotes</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item must">
+          <div class="time">14:00-14:50</div>
+          <div>
+            <div class="title">Plenary: Barbara Mazzolai - Frugal and Sustainable Robotics</div>
+            <div class="meta">Hall A1</div>
+            <div class="why">虽然你不主攻机构，但这场适合补“身体结构、分布式控制、能耗约束”这一类底层直觉。</div>
+          </div>
+        </article>
+        <article class="item core">
+          <div class="time">15:00-16:30</div>
+          <div>
+            <div class="title">Keynote Tutorial 3: Modern Software Tools for Robotics</div>
+            <div class="meta">Strauss 1-2 · Peter Corke, Tobias Fischer</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Wed June 3, 15:00-16:30</div>
+              <div class="fact"><b>地点</b>Strauss 1-2</div>
+              <div class="fact"><b>讲者</b>Peter Corke, Tobias Fischer</div>
+            </div>
+            <div class="why">你是软件工程背景，这场很适合把科研代码、ROS/PyTorch、可复现实验、benchmark 工具链串起来。</div>
+            <details class="more">
+              <summary>展开百科：讲者 / 为什么值得听</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Peter-Corke.jpg" alt="Peter Corke"><div><strong>Peter Corke</strong><span>Robotics Toolbox / QUT</span><a href="https://petercorke.com/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Tobias-Fischer.jpg" alt="Tobias Fischer"><div><strong>Tobias Fischer</strong><span>QUT Centre for Robotics</span><a href="https://research.qut.edu.au/qcr/people/tobias-fischer/">Profile</a></div></div>
+              </div>
+              <p>适合把“科研原型”升级成“研究院可复现系统”：环境管理、仿真接口、benchmark、可视化调试和实验日志。</p>
+              <div class="links"><a href="https://2026.ieee-icra.org/attend/keynote-tutorials/">官方 Tutorial</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item must">
+          <div class="time">16:45-18:15</div>
+          <div>
+            <div class="title">Keynote 4: Manipulation, Humanoids, Embodied Design</div>
+            <div class="meta">Hall A1 · Jeannette Bohg, Kento Kawaharazuka, Nikos Tsagarakis, Yuke Zhu</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Wed June 3, 16:45-18:15</div>
+              <div class="fact"><b>地点</b>Hall A1</div>
+              <div class="fact"><b>关键词</b>Dexterous manipulation, humanoids, robotic foundation models</div>
+            </div>
+            <div class="why">必去。Bohg 的 dexterous manipulation 与 Yuke Zhu 的 generalist humanoid / robotic foundation models 是当天核心。</div>
+            <details class="more">
+              <summary>展开百科：四位讲者 / 研究院视角</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Jeannette-Bohg.png" alt="Jeannette Bohg"><div><strong>Jeannette Bohg</strong><span>Stanford</span><a href="https://iprl.stanford.edu/">IPRL</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Kento-Kawaharazuka.png" alt="Kento Kawaharazuka"><div><strong>Kento Kawaharazuka</strong><span>University of Tokyo</span><a href="https://haraduka.github.io/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Nikos-Tsagarakis.jpg" alt="Nikos Tsagarakis"><div><strong>Nikos Tsagarakis</strong><span>IIT</span><a href="https://hhcm.iit.it/">HHCM</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Yuke-Zhu.jpg" alt="Yuke Zhu"><div><strong>Yuke Zhu</strong><span>UT Austin / NVIDIA</span><a href="https://yukezhu.me/">Homepage</a></div></div>
+              </div>
+              <p>研究院视角：关注机器人 foundation model 的真实机器人数据、动作空间设计、评测协议，以及 humanoid 是否真是必要载体。</p>
+              <div class="links"><a href="#wiki-k4">本页百科</a><a href="https://2026.ieee-icra.org/program/keynote-sessions/">官方 Keynotes</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item net">
+          <div class="time">19:00+</div>
+          <div>
+            <div class="title">Imperial Night</div>
+            <div class="meta">Imperial Palace & Spanish Riding School · 需购票</div>
+            <div class="why">如果预算允许，这是扩大弱连接的好场合。优先约白天交流过的人继续聊，不要只随机社交。</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="day4" class="day">
+      <aside class="date">
+        <div class="dow">Thursday</div>
+        <div class="num">June 4</div>
+        <div class="theme">Foundation Models + Robot Learning</div>
+      </aside>
+      <div class="timeline">
+        <div class="route-strip">
+          <span class="route-step">Hall C Poster</span><span class="arrow">→</span>
+          <span class="route-step">Hall A1 Foundation Models</span><span class="arrow">→</span>
+          <span class="route-step">Exhibition Hall</span><span class="arrow">→</span>
+          <span class="route-step">Strauss 1-2 / Hall A3</span>
+        </div>
+        <article class="item core">
+          <div class="time">09:00-10:30</div>
+          <div>
+            <div class="title">Interactive Session 5 / Industry Keynotes 2</div>
+            <div class="meta">Hall C 或 Strauss 1-2</div>
+            <div class="why">建议优先扫 poster，找 zero-shot 6D pose、diffusion prior、视觉触觉、VLA fine-tuning、机器人学习数据相关论文。</div>
+            <ul class="papers">
+              <li>InstantPose: Zero-Shot Instance-Level 6D Pose Estimation from a Single View</li>
+              <li>Enhancing Robot Learning through Cognitive Reasoning Trajectory Optimization</li>
+              <li>Neural Internal Model Control</li>
+            </ul>
+          </div>
+        </article>
+        <article class="item must">
+          <div class="time">11:00-12:30</div>
+          <div>
+            <div class="title">Keynote 5: Robot Learning, Planning & Foundation Models</div>
+            <div class="meta">Hall A1 · David Hsu, Stefanie Tellex, Noémie Jaquier, Paolo Robuffo Giordano</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Thu June 4, 11:00-12:30</div>
+              <div class="fact"><b>地点</b>Hall A1</div>
+              <div class="fact"><b>优先级</b>全会最高之一</div>
+            </div>
+            <div class="why">全会最贴合你的 session 之一。规划与 LLM、语言-部分可观测环境、几何归纳偏置、鲁棒学习控制都值得记。</div>
+            <details class="more">
+              <summary>展开百科：讲者 / 你该重点记录什么</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/David-Hsu.jpg" alt="David Hsu"><div><strong>David Hsu</strong><span>NUS / NVIDIA Research</span><a href="https://adacomp.org/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Stefanie-Tellex.jpg" alt="Stefanie Tellex"><div><strong>Stefanie Tellex</strong><span>Brown H2R Lab</span><a href="https://h2r.cs.brown.edu/">Lab</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Noemie-Jaquier.jpg" alt="Noémie Jaquier"><div><strong>Noémie Jaquier</strong><span>KTH</span><a href="https://njaquier.ch/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Paolo-Robuffo-Giordano.jpg" alt="Paolo Robuffo Giordano"><div><strong>Paolo Robuffo Giordano</strong><span>IRISA Rennes</span><a href="https://team.inria.fr/rainbow/team/prg/">Profile</a></div></div>
+              </div>
+              <p>重点记录：LLM 与规划的接口、语言在 POMDP 中如何使用、几何归纳偏置如何减少数据需求、学习控制如何处理真实系统误差。</p>
+              <div class="links"><a href="#wiki-k5">本页百科</a><a href="https://2026.ieee-icra.org/program/keynote-sessions/">官方 Keynotes</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item core">
+          <div class="time">12:30-14:00</div>
+          <div>
+            <div class="title">Awards Lunch + 展区快速巡检</div>
+            <div class="meta">Exhibition Hall & Hall A</div>
+            <div class="why">找做机器人 foundation model、仿真平台、传感器、医疗/显微操作自动化的公司。每家公司只问一个问题：他们真实部署中的最大瓶颈是什么。</div>
+          </div>
+        </article>
+        <article class="item must">
+          <div class="time">15:00-16:30</div>
+          <div>
+            <div class="title">Keynote Tutorial 4: Behavior Foundation Models from the Ground Up</div>
+            <div class="meta">Strauss 1-2</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Thu June 4, 15:00-16:30</div>
+              <div class="fact"><b>地点</b>Strauss 1-2</div>
+              <div class="fact"><b>讲者</b>Rudolf Lioutikov</div>
+            </div>
+            <div class="why">必去。它直接对应“多模态智能 + 机器人行为模型”的下一代研究方向。</div>
+            <details class="more">
+              <summary>展开百科：讲者照片 / 项目页 / 技术关键词</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://2026.ieee-icra.org/wp-content/uploads/sites/2/2026/05/Rudolf-Lioutikov.png" alt="Rudolf Lioutikov"><div><strong>Rudolf Lioutikov</strong><span>KIT, Intuitive Robots Lab</span><a href="https://www.intuitive-robots.net/">Lab</a></div></div>
+              </div>
+              <p>关键词：behavior foundation model、VLM/VLA、action representation、spatio-temporal reasoning、observation/task conditioning。</p>
+              <div class="links"><a href="#wiki-kt4">本页百科</a><a href="https://intuitive-robots.github.io/bfm-ground-up/">Tutorial 项目页</a><a href="https://2026.ieee-icra.org/attend/keynote-tutorials/">官方 Tutorial</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item must">
+          <div class="time">16:45-18:15</div>
+          <div>
+            <div class="title">Regular Session: Robot Learning II</div>
+            <div class="meta">ThBT2 · Hall A3</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Thu June 4, 16:45-18:15</div>
+              <div class="fact"><b>地点</b>Hall A3</div>
+              <div class="fact"><b>形式</b>Regular oral session, ThBT2</div>
+            </div>
+            <div class="why">我建议这一时段选 oral，而不是 HRI keynote。它更贴近你要做的前沿科研/研究院方向。</div>
+            <ul class="papers">
+              <li>GP3: 3D Geometry-Aware Policy with Multi-View Images for Robotic Manipulation</li>
+              <li>Generative Predictive Control: Flow Matching Policies for Dynamic Tasks</li>
+              <li>Adaptive Capacity Allocation for Vision Language Action Fine-Tuning</li>
+              <li>Diffusion / flow matching / physically consistent policy 相关论文</li>
+            </ul>
+            <details class="more">
+              <summary>展开百科：为什么压过同期 HRI keynote</summary>
+              <p>这个时段的价值在于它更接近“能落到代码和实验”的方法：多视角几何 policy、flow matching policy、VLA fine-tuning。建议现场优先找论文作者确认数据规模、控制频率、失败案例和真实机器人评测。</p>
+              <div class="links"><a href="https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html">PaperCept Thu June 4</a></div>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="day5" class="day">
+      <aside class="date">
+        <div class="dow">Friday</div>
+        <div class="num">June 5</div>
+        <div class="theme">VLA 与真实机器人</div>
+      </aside>
+      <div class="timeline">
+        <div class="route-strip">
+          <span class="route-step">Foyer A</span><span class="arrow">→</span>
+          <span class="route-step">Hall A1 VLA Workshop</span><span class="arrow">→</span>
+          <span class="route-step">Strauss 1 / Hall C4 备选</span><span class="arrow">→</span>
+          <span class="route-step">晚间复盘</span>
+        </div>
+        <article class="item must">
+          <div class="time">09:00-17:30</div>
+          <div>
+            <div class="title">From Data to Decisions: VLA Pipelines for Real Robots</div>
+            <div class="meta">Full day · Hall A1</div>
+            <div class="facts">
+              <div class="fact"><b>时间</b>Fri June 5, 09:00-17:30</div>
+              <div class="fact"><b>地点</b>Hall A1</div>
+              <div class="fact"><b>类型</b>Full-day Workshop</div>
+            </div>
+            <div class="why">这是你的收官主线。重点看 VLA 数据、模型适配、真实机器人推理、从 demo 到 policy 的工程瓶颈。</div>
+            <details class="more">
+              <summary>展开百科：官网 / 参会打法 / 追问清单</summary>
+              <div class="speaker-grid">
+                <div class="speaker"><img src="https://icra2026vlapipeline.github.io/images/shuran.jpg" alt="Shuran Song"><div><strong>Shuran Song</strong><span>09:00 invited talk</span><a href="https://shurans.github.io/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://icra2026vlapipeline.github.io/images/yuke.jpg" alt="Yuke Zhu"><div><strong>Yuke Zhu</strong><span>12:00 invited talk</span><a href="https://yukezhu.me/">Homepage</a></div></div>
+                <div class="speaker"><img src="https://icra2026vlapipeline.github.io/images/alberto.jpg" alt="Alberto Rodriguez"><div><strong>Alberto Rodriguez</strong><span>14:00 invited talk</span><a href="https://scholar.google.com/citations?user=U7w5r3gAAAAJ">Scholar</a></div></div>
+                <div class="speaker"><img src="https://icra2026vlapipeline.github.io/images/karl.webp" alt="Karl Pertsch"><div><strong>Karl Pertsch</strong><span>16:40 invited talk</span><a href="https://kpertsch.github.io/">Homepage</a></div></div>
+              </div>
+              <p>建议把这天当作“研究院路线校准”：VLA 现在最缺的是数据协议、动作表示、泛化评测，还是真实机器人闭环稳定性。每听一个报告都记录它用什么机器人、多少数据、什么频率、失败模式是什么。</p>
+              <div class="links"><a href="#wiki-vla">本页百科</a><a href="https://icra2026vlapipeline.github.io/">Workshop 官网</a><a href="mailto:icra2026vlapipeline@gmail.com">官方邮箱</a><a href="https://2026.ieee-icra.org/workshops-and-tutorials/">官方 Workshop 列表</a></div>
+            </details>
+          </div>
+        </article>
+        <article class="item alt">
+          <div class="time">同日备选</div>
+          <div>
+            <div class="title">Uncertainty in Open-World Robotics / Geometry in Data-Driven Robotics / RoboTac</div>
+            <div class="meta">Strauss 1 / Hall C4 / Hall C6</div>
+            <div class="why">如果 VLA workshop 内容偏泛，可按兴趣切换：开放世界不确定性、几何归纳偏置、视觉触觉与具身智能。</div>
+          </div>
+        </article>
+        <article class="item core">
+          <div class="time">17:30 后</div>
+          <div>
+            <div class="title">复盘：把参会笔记收敛成 3 个研究问题</div>
+            <div class="why">建议输出三类问题：一个可投稿 ICRA/IROS 的方法问题，一个可落地到你显微镜系统的系统问题，一个适合企业研究院长期投入的 foundation model 问题。</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="prep" class="strategy">
+      <h2>参会打法 Playbook</h2>
+      <div class="grid two">
+        <div>
+          <h3>每天固定动作</h3>
+          <ul>
+            <li>早上选 5 篇 poster，现场只深聊 2 篇。</li>
+            <li>每场 keynote 只记 3 件事：问题定义、失败模式、真实系统约束。</li>
+            <li>午饭和咖啡时间不要刷手机，优先补前一场听到的作者。</li>
+            <li>晚上用 20 分钟把“可以迁移到显微镜视觉伺服”的点单独标出来。</li>
+          </ul>
+        </div>
+        <div>
+          <h3>你该主动问的问题</h3>
+          <ul>
+            <li>这个方法离真实机器人部署差的主要是数据、控制频率、传感器还是评测？</li>
+            <li>VLA 在闭环伺服任务中，失败主要来自 perception、action discretization 还是 temporal consistency？</li>
+            <li>如果只有小数据和昂贵硬件，怎样设计最小可发表的 real-robot benchmark？</li>
+            <li>机器人 foundation model 是否真的需要 humanoid，还是需要更好的 task-conditioned sensing/action interface？</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources">
+      <div class="section-title">
+        <h2>信息来源 Sources</h2>
+      </div>
+      <p>本计划基于 2026-05-28 查询到的官方信息整理；PaperCept 页面显示技术程序最后更新为 2026-05-27，官方说明日程仍可能调整。</p>
+      <p>
+        <a href="https://2026.ieee-icra.org/program/">ICRA 2026 Program</a> ·
+        <a href="https://ras.papercept.net/conferences/conferences/ICRA26/program/">PaperCept Program</a> ·
+        <a href="https://2026.ieee-icra.org/workshops-and-tutorials/">Workshops & Tutorials</a> ·
+        <a href="https://2026.ieee-icra.org/program/keynote-sessions/">Keynote Sessions</a> ·
+        <a href="https://2026.ieee-icra.org/attend/keynote-tutorials/">Keynote Tutorials</a> ·
+        <a href="https://2026.ieee-icra.org/attend/plenary-sessions/">Plenary Sessions</a>
+      </p>
+    </section>
+    <a class="record-jump" href="#field-notes" data-open-section="field-notes">记录 Notes</a>
+    <button class="backtop" type="button" id="backTop" aria-label="返回顶部">↑</button>
+  </main>
+  <script>
+    const labelMap = {
+      "时间": "时间 Time",
+      "地点": "Address 地址",
+      "讲者": "讲者 Speaker",
+      "主题": "主题 Topic",
+      "关键词": "关键词 Keywords",
+      "形式": "形式 Format",
+      "类型": "类型 Type",
+      "联系": "联系 Contact",
+      "官方联系": "官方联系 Contact",
+      "优先级": "优先级 Priority",
+      "你要听什么": "你要听什么 Focus",
+      "核心问题": "核心问题 Core question"
+    };
+
+    document.querySelectorAll(".fact b").forEach((node) => {
+      const raw = node.textContent.trim();
+      if (labelMap[raw]) node.textContent = labelMap[raw];
+    });
+
+    const bilingualTitles = [
+      { match: "MM-Spatial AI:", zh: "多模态空间智能与开放世界导航", en: "MM-Spatial AI: Multi-Modal Spatial AI for Robust Navigation and Open-World Understanding" },
+      { match: "如果想转向操作/伺服", zh: "备选：主动感知或接触密集操作", en: "Alternative: Active Perception or Contact-Rich Robotics" },
+      { match: "Welcome Reception", zh: "欢迎酒会", en: "Welcome Reception" },
+      { match: "Keynote Tutorial 1:", zh: "高速飞行里的视觉闭环学习", en: "Keynote Tutorial 1: Learning Agile Vision-Based Quadrotor Flight" },
+      { match: "Keynote 1:", zh: "自动驾驶与机器人导航前沿", en: "Keynote 1: Autonomous Vehicles & Navigation" },
+      { match: "Ken Goldberg", zh: "机器人操作为什么缺大数据", en: "Plenary: Ken Goldberg - Robot Manipulation's 100,000-year Data Gap" },
+      { match: "Interactive Session 2", zh: "海报交流与最新结果速览", en: "Interactive Session 2 + Late Breaking Results" },
+      { match: "Regular Session - Control and Optimization", zh: "备选 A：控制与优化论文专场", en: "Alternative A: Regular Session - Control and Optimization" },
+      { match: "Keynote 2 - Medical", zh: "备选 B：医疗与健康机器人前沿", en: "Alternative B: Keynote 2 - Medical & Healthcare Robotics" },
+      { match: "Panel 3:", zh: "自动化 AI 的可信与可持续", en: "Panel 3: Sustainable and Trustworthy AI for Automation" },
+      { match: "Keynote 3:", zh: "空间感知、SLAM 与机器人记忆", en: "Keynote 3: Robot Perception & Spatial AI" },
+      { match: "Barbara Mazzolai", zh: "低资源、低能耗的机器人设计", en: "Plenary: Barbara Mazzolai - Frugal and Sustainable Robotics" },
+      { match: "Keynote Tutorial 3:", zh: "机器人科研软件工具链", en: "Keynote Tutorial 3: Modern Software Tools for Robotics" },
+      { match: "Keynote 4:", zh: "灵巧操作、人形机器人与具身智能", en: "Keynote 4: Manipulation, Humanoids, Embodied Design" },
+      { match: "Imperial Night", zh: "帝国之夜社交活动", en: "Imperial Night" },
+      { match: "Interactive Session 5", zh: "海报交流或产业侧落地经验", en: "Interactive Session 5 / Industry Keynotes 2" },
+      { match: "Keynote 5:", zh: "机器人基础模型与规划学习", en: "Keynote 5: Robot Learning, Planning & Foundation Models" },
+      { match: "Awards Lunch", zh: "颁奖午餐与展区快速巡检", en: "Awards Lunch + Exhibition Scan" },
+      { match: "Keynote Tutorial 4:", zh: "从零搭建机器人行为基础模型", en: "Keynote Tutorial 4: Behavior Foundation Models from the Ground Up" },
+      { match: "Regular Session: Robot Learning II", zh: "机器人学习核心论文专场 II", en: "Regular Session: Robot Learning II" },
+      { match: "From Data to Decisions:", zh: "VLA 如何真正上机器人", en: "From Data to Decisions: VLA Pipelines for Real Robots" },
+      { match: "Uncertainty in Open-World Robotics", zh: "备选：不确定性、几何先验或触觉", en: "Uncertainty in Open-World Robotics / Geometry in Data-Driven Robotics / RoboTac" },
+      { match: "复盘", zh: "复盘：提炼后续研究问题", en: "Debrief: Turn Notes into 3 Research Questions" },
+      { match: "整理 10", zh: "会前问题清单整理", en: "Prepare 10 Questions Before the Conference" },
+      { match: "注册", zh: "注册与会场踩点", en: "Registration and Venue Walkthrough" }
+    ];
+
+    document.querySelectorAll(".item .title").forEach((node) => {
+      const raw = node.textContent.trim();
+      const hit = bilingualTitles.find((entry) => raw.includes(entry.match));
+      if (!hit) return;
+      node.innerHTML = `<span class="zh-title">${hit.zh}</span><span class="en-title">${hit.en}</span>`;
+    });
+
+    function initialsFromName(name) {
+      const parts = name.trim().split(/\s+/).filter(Boolean);
+      if (!parts.length) return "IMG";
+      return parts.slice(0, 2).map((part) => part[0]).join("").toUpperCase();
+    }
+
+    function enableDataSaverImages() {
+      document.querySelectorAll(".speaker img").forEach((img) => {
+        img.loading = "lazy";
+        img.decoding = "async";
+        if (!img.dataset.src) img.dataset.src = img.getAttribute("src") || "";
+        img.removeAttribute("src");
+        const speaker = img.closest(".speaker");
+        if (speaker && !speaker.querySelector(".speaker-avatar")) {
+          const avatar = document.createElement("span");
+          avatar.className = "speaker-avatar";
+          avatar.textContent = initialsFromName(speaker.querySelector("strong")?.textContent || img.alt || "");
+          img.before(avatar);
+        }
+      });
+      document.querySelectorAll(".speaker-grid").forEach((grid) => {
+        grid.dataset.loaded = "false";
+      });
+    }
+
+    function loadSpeakerImages(scope = document) {
+      scope.querySelectorAll(".speaker img[data-src]").forEach((img) => {
+        if (!img.getAttribute("src")) img.setAttribute("src", img.dataset.src);
+      });
+      scope.querySelectorAll(".speaker-grid").forEach((grid) => {
+        grid.dataset.loaded = "true";
+      });
+    }
+
+    enableDataSaverImages();
+
+    const search = document.getElementById("scheduleSearch");
+    const resultCount = document.getElementById("resultCount");
+    const priorityButtons = [...document.querySelectorAll("[data-priority]")];
+    let activePriority = "all";
+
+    function textOf(el) {
+      return el.textContent.toLowerCase().replace(/\s+/g, " ");
+    }
+
+    function parseTimeRange(raw) {
+      const text = raw.trim();
+      const range = text.match(/(\d{1,2}):(\d{2})\s*[-–]\s*(\d{1,2}):(\d{2})/);
+      if (range) {
+        return {
+          start: Number(range[1]) * 60 + Number(range[2]),
+          end: Number(range[3]) * 60 + Number(range[4]),
+          label: `${range[1].padStart(2, "0")}:${range[2]}-${range[3].padStart(2, "0")}:${range[4]}`
+        };
+      }
+
+      const plus = text.match(/(\d{1,2}):(\d{2})\s*\+/);
+      if (plus) {
+        const start = Number(plus[1]) * 60 + Number(plus[2]);
+        return { start, end: start + 60, label: `${plus[1].padStart(2, "0")}:${plus[2]}+` };
+      }
+
+      return null;
+    }
+
+    function priorityOf(item) {
+      return ["must", "core", "alt", "net"].find((name) => item.classList.contains(name)) || "core";
+    }
+
+    function shortTitle(item) {
+      const title = item.querySelector(".zh-title")?.textContent.trim() || item.querySelector(".title")?.textContent.trim() || "Session";
+      return title
+        .replace(/^Keynote Tutorial\s*\d*:\s*/i, "Tutorial: ")
+        .replace(/^Keynote\s*\d*:\s*/i, "Keynote: ")
+        .replace(/^Regular Session:\s*/i, "Oral: ")
+        .replace(/^Plenary:\s*/i, "Plenary: ");
+    }
+
+    function titleParts(item) {
+      const title = item.querySelector(".title");
+      const zh = title?.querySelector(".zh-title")?.textContent.trim();
+      const en = title?.querySelector(".en-title")?.textContent.trim();
+      const raw = title?.textContent.trim().replace(/\s+/g, " ") || "Session";
+      return {
+        zh: zh || raw,
+        en: en || raw
+      };
+    }
+
+    const venueAddress = "VIECON - Vienna Congress & Convention Center, Messeplatz 1, 1020 Vienna, Austria";
+
+    function factValue(item, label) {
+      const facts = [...item.querySelectorAll(".fact")];
+      const hit = facts.find((fact) => fact.querySelector("b")?.textContent.includes(label));
+      if (!hit) return "";
+      const clone = hit.cloneNode(true);
+      clone.querySelector("b")?.remove();
+      return clone.textContent.trim().replace(/\s+/g, " ");
+    }
+
+    function itemAddress(item, metaText) {
+      const room = (factValue(item, "Address") || factValue(item, "地点")).replace(/^VIECON,?\s*/i, "");
+      if (room) return `${room}, ${venueAddress}`;
+      const metaRoom = metaText.split("·").map((part) => part.trim()).filter(Boolean).pop() || "";
+      if (metaRoom && !/online|remote/i.test(metaRoom)) return `${metaRoom}, ${venueAddress}`;
+      return venueAddress;
+    }
+
+    function priorityLabel(priority) {
+      const labels = {
+        must: "必去 Must",
+        core: "主线 Core",
+        alt: "备选 Alternative",
+        net: "社交 Networking"
+      };
+      return labels[priority] || "主线 Core";
+    }
+
+    function compactDetailsHtml(item) {
+      const facts = [...item.querySelectorAll(".facts .fact")]
+        .filter((fact) => {
+          const label = fact.querySelector("b")?.textContent.trim() || "";
+          return !label.includes("时间") && !label.includes("Address") && !label.includes("地点");
+        })
+        .slice(0, 4)
+        .map((fact) => fact.outerHTML)
+        .join("");
+
+      const more = item.querySelector("details.more");
+      const speakerGrid = more?.querySelector(".speaker-grid")?.outerHTML || "";
+      const question = more?.querySelector("p")?.outerHTML || "";
+      const links = more?.querySelector(".links")?.outerHTML || "";
+      const imageButton = speakerGrid ? '<button class="load-images" type="button">加载本节点图片 Load photos</button>' : "";
+      const fullLink = item.id ? `<a class="master-full-link" href="#${item.id}">跳到完整每日明细 Full card</a>` : "";
+
+      return `
+        <div class="master-detail">
+          ${facts ? `<div class="facts">${facts}</div>` : ""}
+          ${speakerGrid}
+          ${imageButton}
+          ${question}
+          ${links}
+          ${fullLink}
+        </div>
+      `;
+    }
+
+    function buildVisualTimelines() {
+      document.querySelectorAll(".day").forEach((day, dayIndex) => {
+        const timeline = day.querySelector(".timeline");
+        const route = timeline?.querySelector(".route-strip");
+        if (!timeline || !route || timeline.querySelector(".time-map")) return;
+
+        const items = [...timeline.querySelectorAll(".item")];
+        const events = items.map((item, itemIndex) => {
+          const timeText = item.querySelector(".time")?.textContent || "";
+          const parsed = parseTimeRange(timeText);
+          const id = `event-${dayIndex}-${itemIndex}`;
+          item.dataset.eventId = id;
+          return { item, id, parsed, timeText, title: shortTitle(item), priority: priorityOf(item) };
+        });
+
+        const timed = events.filter((event) => event.parsed);
+        if (!timed.length) return;
+
+        const min = Math.min(...timed.map((event) => event.parsed.start), 9 * 60);
+        const max = Math.max(...timed.map((event) => event.parsed.end), 18 * 60);
+        const startHour = Math.floor(min / 60) * 60;
+        const endHour = Math.ceil(max / 60) * 60;
+        const total = endHour - startHour;
+
+        const map = document.createElement("div");
+        map.className = "time-map";
+
+        const ruler = document.createElement("div");
+        ruler.className = "time-ruler";
+        for (let t = startHour; t <= endHour; t += 120) {
+          const tick = document.createElement("span");
+          tick.className = "tick";
+          tick.style.left = `${((t - startHour) / total) * 100}%`;
+          tick.textContent = `${String(Math.floor(t / 60)).padStart(2, "0")}:00`;
+          ruler.appendChild(tick);
+        }
+
+        const lane = document.createElement("div");
+        lane.className = "time-lane";
+
+        timed.forEach((event) => {
+          const block = document.createElement("a");
+          block.href = `#${event.id}`;
+          block.className = `time-block ${event.priority}`;
+          block.dataset.eventId = event.id;
+          block.style.left = `${((event.parsed.start - startHour) / total) * 100}%`;
+          block.style.width = `${Math.max(((event.parsed.end - event.parsed.start) / total) * 100, 6)}%`;
+          block.title = `${event.parsed.label} · ${event.title}`;
+          block.setAttribute("aria-label", `${event.parsed.label} · ${event.title}`);
+          block.innerHTML = `<small>${event.parsed.label}</small>`;
+          lane.appendChild(block);
+          event.item.id = event.id;
+        });
+
+        const note = document.createElement("div");
+        note.className = "time-note";
+        note.innerHTML = `
+          <div class="time-legend">
+            <span><span class="dot must"></span> 必去 Must</span>
+            <span><span class="dot core"></span> 主线 Core</span>
+            <span><span class="dot alt"></span> 备选 Alternative</span>
+            <span><span class="dot net"></span> 社交 Networking</span>
+          </div>
+          <div class="time-list">
+            ${timed.map((event) => `
+              <a class="time-list-item" href="#${event.id}">
+                <span class="dot ${event.priority}"></span>
+                <b>${event.parsed.label}</b>
+                <span>${escapeHtml(event.title)}</span>
+              </a>
+            `).join("")}
+          </div>
+        `;
+
+        map.append(ruler, lane, note);
+        route.after(map);
+
+        const mini = document.createElement("div");
+        mini.className = "mini-agenda";
+        timed.slice(0, 5).forEach((event) => {
+          const row = document.createElement("div");
+          row.className = "mini-slot";
+          row.innerHTML = `<b>${event.parsed.label}</b><span>${event.title}</span>`;
+          mini.appendChild(row);
+        });
+        day.querySelector(".date")?.appendChild(mini);
+      });
+    }
+
+    function groupParallelAlternatives() {
+      document.querySelectorAll(".timeline").forEach((timeline) => {
+        const items = [...timeline.children].filter((child) => child.classList?.contains("item"));
+        let i = 0;
+        while (i < items.length) {
+          const first = items[i];
+          const time = first.querySelector(".time")?.textContent.trim();
+          if (!first.classList.contains("alt") || !time) {
+            i += 1;
+            continue;
+          }
+
+          const run = [first];
+          let j = i + 1;
+          while (j < items.length) {
+            const next = items[j];
+            const nextTime = next.querySelector(".time")?.textContent.trim();
+            if (!next.classList.contains("alt") || nextTime !== time) break;
+            run.push(next);
+            j += 1;
+          }
+
+          if (run.length > 1) {
+            const wrapper = document.createElement("div");
+            wrapper.className = "parallel-options";
+            wrapper.innerHTML = `<div class="parallel-label"><span>${time} 并列备选 Alternatives</span><span>按当天精力二选一</span></div><div class="parallel-grid"></div>`;
+            const grid = wrapper.querySelector(".parallel-grid");
+            timeline.insertBefore(wrapper, run[0]);
+            run.forEach((item) => {
+              item.classList.add("parallel-alt");
+              grid.appendChild(item);
+            });
+          }
+
+          i = j;
+        }
+      });
+    }
+
+    function buildMasterTimeline() {
+      const target = document.getElementById("masterTimeline");
+      if (!target || target.children.length) return;
+
+      const dayNames = {
+        day0: "May 31",
+        day1: "June 1",
+        day2: "June 2",
+        day3: "June 3",
+        day4: "June 4",
+        day5: "June 5"
+      };
+
+      document.querySelectorAll(".day").forEach((day) => {
+        const dayId = day.id;
+        const title = day.querySelector(".date .num")?.textContent.trim() || dayNames[dayId] || dayId;
+        const theme = day.querySelector(".date .theme")?.textContent.trim() || "";
+        const dow = day.querySelector(".date .dow")?.textContent.trim() || "";
+        const items = [...day.querySelectorAll(".item")].filter((item) => !item.classList.contains("alt") || item.classList.contains("must"));
+        const sorted = items.sort((a, b) => {
+          const at = parseTimeRange(a.querySelector(".time")?.textContent || "")?.start ?? 99999;
+          const bt = parseTimeRange(b.querySelector(".time")?.textContent || "")?.start ?? 99999;
+          return at - bt;
+        });
+
+        const dayBlock = document.createElement("section");
+        dayBlock.className = "master-day";
+        dayBlock.innerHTML = `
+          <aside class="master-date">
+            <strong>${escapeHtml(title)}</strong>
+            <span>${escapeHtml(dow)}<br>${escapeHtml(theme)}</span>
+          </aside>
+          <div class="master-line"></div>
+        `;
+
+        const line = dayBlock.querySelector(".master-line");
+        sorted.forEach((item) => {
+          const priority = priorityOf(item);
+          const time = item.querySelector(".time")?.textContent.trim() || "";
+          const titles = titleParts(item);
+          const meta = item.querySelector(".meta")?.textContent.trim() || "";
+          const why = item.querySelector(".why")?.textContent.trim() || "";
+          const address = itemAddress(item, meta);
+          const detailHtml = compactDetailsHtml(item);
+          const article = document.createElement("article");
+          article.className = `master-event ${priority}`;
+          article.innerHTML = `
+            <span class="master-dot" aria-hidden="true"></span>
+            <div class="master-time">${escapeHtml(time)}</div>
+            <div>
+              <div class="master-priority">${escapeHtml(priorityLabel(priority))}</div>
+              <div class="master-event-title">
+                <span class="zh-title">${escapeHtml(titles.zh)}</span>
+                <span class="en-title">${escapeHtml(titles.en)}</span>
+              </div>
+              ${meta ? `<div class="master-event-meta">${escapeHtml(meta)}</div>` : ""}
+              <div class="master-address"><b>Address 地址</b> ${escapeHtml(address)}</div>
+              ${why ? `<div class="master-event-text">${escapeHtml(why)}</div>` : ""}
+              <details class="master-more" open>
+                <summary>展开讲者、链接和追问 Speaker / Links / Questions</summary>
+                ${detailHtml}
+              </details>
+            </div>
+          `;
+          line.appendChild(article);
+        });
+
+        target.appendChild(dayBlock);
+      });
+    }
+
+    function wrapSupportDimensions() {
+      if (document.getElementById("dimensionArea")) return;
+      const area = document.createElement("section");
+      area.id = "dimensionArea";
+      area.className = "dimension-area";
+      area.innerHTML = '<div class="section-title"><h2>按维度展开 Dimension Details</h2><span class="small">默认只看主时间线 Main Timeline；需要时再打开这些信息层</span></div>';
+
+      const groups = [
+        { id: "drawer-field-notes", title: "现场记录 Field Notes：笔记、图片和视频", ids: ["field-notes"], open: true },
+        { id: "drawer-logic", title: "推荐逻辑 Recommendation Logic：匹配策略、总览、取舍矩阵", ids: ["fit", "overview", "decision"] },
+        { id: "drawer-routes", title: "空间信息 Route and Address：路线图与会场动线", ids: ["routes"] },
+        { id: "drawer-glossary", title: "术语和百科 Glossary and People：中英文对照、讲者与链接", ids: ["terms", "wiki"] },
+        { id: "drawer-daily", title: "完整每日明细 Full Daily Details：所有卡片、讲者、展开信息", ids: ["week", "day0", "day1", "day2", "day3", "day4", "day5", "prep"] }
+      ];
+
+      const anchor = document.getElementById("field-notes");
+      anchor?.before(area);
+
+      groups.forEach((group) => {
+        const drawer = document.createElement("details");
+        drawer.className = "dimension-drawer";
+        drawer.id = group.id;
+        drawer.dataset.sections = group.ids.join(" ");
+        if (group.open) drawer.open = true;
+        drawer.innerHTML = `<summary>${group.title}</summary>`;
+        const pack = document.createElement("div");
+        pack.className = "dimension-pack";
+        group.ids.forEach((id) => {
+          const section = document.getElementById(id);
+          if (section) pack.appendChild(section);
+        });
+        drawer.appendChild(pack);
+        area.appendChild(drawer);
+      });
+    }
+
+    const recordEls = {
+      day: document.getElementById("recordDay"),
+      title: document.getElementById("recordTitle"),
+      text: document.getElementById("recordText"),
+      files: document.getElementById("recordFiles"),
+      save: document.getElementById("saveRecord"),
+      export: document.getElementById("exportRecords"),
+      filter: document.getElementById("recordFilter"),
+      refresh: document.getElementById("refreshRecords"),
+      gallery: document.getElementById("recordGallery"),
+      status: document.getElementById("recordStatus")
+    };
+
+    const recordStore = {
+      db: null,
+      ready: false,
+      memory: []
+    };
+
+    function setRecordStatus(message) {
+      if (recordEls.status) recordEls.status.textContent = message || "";
+    }
+
+    function openRecordDb() {
+      return new Promise((resolve) => {
+        if (!("indexedDB" in window)) {
+          setRecordStatus("当前浏览器不支持 IndexedDB，本次只能临时预览。");
+          resolve(null);
+          return;
+        }
+
+        const req = indexedDB.open("icra2026-field-notes", 1);
+        req.onupgradeneeded = () => {
+          const db = req.result;
+          if (!db.objectStoreNames.contains("records")) {
+            db.createObjectStore("records", { keyPath: "id" });
+          }
+        };
+        req.onsuccess = () => {
+          recordStore.db = req.result;
+          recordStore.ready = true;
+          resolve(req.result);
+        };
+        req.onerror = () => {
+          setRecordStatus("无法打开本地媒体库，本次记录会暂存在当前页面内。");
+          resolve(null);
+        };
+      });
+    }
+
+    function txStore(mode = "readonly") {
+      if (!recordStore.db) return null;
+      return recordStore.db.transaction("records", mode).objectStore("records");
+    }
+
+    function getAllRecords() {
+      return new Promise((resolve) => {
+        const store = txStore("readonly");
+        if (!store) {
+          resolve([...recordStore.memory]);
+          return;
+        }
+        const req = store.getAll();
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => resolve([...recordStore.memory]);
+      });
+    }
+
+    function putRecord(record) {
+      return new Promise((resolve, reject) => {
+        const store = txStore("readwrite");
+        if (!store) {
+          recordStore.memory.push(record);
+          resolve();
+          return;
+        }
+        const req = store.put(record);
+        req.onsuccess = () => resolve();
+        req.onerror = () => reject(req.error);
+      });
+    }
+
+    function deleteRecord(id) {
+      return new Promise((resolve) => {
+        const store = txStore("readwrite");
+        if (!store) {
+          recordStore.memory = recordStore.memory.filter((record) => record.id !== id);
+          resolve();
+          return;
+        }
+        const req = store.delete(id);
+        req.onsuccess = () => resolve();
+        req.onerror = () => resolve();
+      });
+    }
+
+    async function filesToMedia(files) {
+      return Promise.all([...files].map(async (file) => ({
+        name: file.name,
+        type: file.type,
+        size: file.size,
+        blob: file
+      })));
+    }
+
+    function formatBytes(size) {
+      if (!size) return "0 B";
+      const units = ["B", "KB", "MB", "GB"];
+      let value = size;
+      let unit = 0;
+      while (value >= 1024 && unit < units.length - 1) {
+        value /= 1024;
+        unit += 1;
+      }
+      return `${value.toFixed(unit ? 1 : 0)} ${units[unit]}`;
+    }
+
+    function renderMedia(media) {
+      if (!media?.blob) return "";
+      const url = URL.createObjectURL(media.blob);
+      const safeName = media.name || "media";
+      if (media.type?.startsWith("video/")) {
+        return `<div><video controls preload="metadata" src="${url}"></video><div class="media-name">${safeName} · ${formatBytes(media.size)}</div></div>`;
+      }
+      if (media.type?.startsWith("image/")) {
+        return `<div><img src="${url}" alt="${safeName}"><div class="media-name">${safeName} · ${formatBytes(media.size)}</div></div>`;
+      }
+      return `<div class="media-name">${safeName} · ${formatBytes(media.size)}</div>`;
+    }
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    async function renderRecords() {
+      if (!recordEls.gallery) return;
+      const filter = recordEls.filter?.value || "all";
+      const records = (await getAllRecords())
+        .filter((record) => filter === "all" || record.day === filter)
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+      if (!records.length) {
+        recordEls.gallery.innerHTML = '<div class="record-card"><p>当前筛选下还没有记录。</p></div>';
+        return;
+      }
+
+      recordEls.gallery.innerHTML = records.map((record) => {
+        const created = new Date(record.createdAt).toLocaleString("zh-CN", { hour12: false });
+        const mediaHtml = record.media?.length
+          ? `<div class="media-grid">${record.media.map(renderMedia).join("")}</div>`
+          : "";
+        return `
+          <article class="record-card">
+            <div class="record-head">
+              <div>
+                <strong>${escapeHtml(record.title || "未命名记录")}</strong>
+                <span>${escapeHtml(record.day)} · ${created}</span>
+              </div>
+              <button class="delete-record" type="button" data-record-id="${record.id}">删除</button>
+            </div>
+            ${record.note ? `<p>${escapeHtml(record.note)}</p>` : ""}
+            ${mediaHtml}
+          </article>
+        `;
+      }).join("");
+
+      recordEls.gallery.querySelectorAll("[data-record-id]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          await deleteRecord(button.dataset.recordId);
+          setRecordStatus("已删除一条记录。");
+          renderRecords();
+        });
+      });
+    }
+
+    async function saveRecord() {
+      const title = recordEls.title.value.trim();
+      const note = recordEls.text.value.trim();
+      const files = recordEls.files.files;
+      if (!title && !note && !files.length) {
+        setRecordStatus("先写一点笔记，或选择图片/视频。");
+        return;
+      }
+
+      const record = {
+        id: crypto.randomUUID ? crypto.randomUUID() : `record-${Date.now()}`,
+        day: recordEls.day.value,
+        title,
+        note,
+        createdAt: new Date().toISOString(),
+        media: await filesToMedia(files)
+      };
+
+      try {
+        await putRecord(record);
+        recordEls.title.value = "";
+        recordEls.text.value = "";
+        recordEls.files.value = "";
+        setRecordStatus("已保存到本地浏览器。");
+        renderRecords();
+      } catch (error) {
+        setRecordStatus(`保存失败：${error?.message || "可能超过浏览器本地存储配额"}`);
+      }
+    }
+
+    async function exportRecords() {
+      const records = await getAllRecords();
+      const payload = records.map((record) => ({
+        id: record.id,
+        day: record.day,
+        title: record.title,
+        note: record.note,
+        createdAt: record.createdAt,
+        media: (record.media || []).map((media) => ({
+          name: media.name,
+          type: media.type,
+          size: media.size
+        }))
+      }));
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `icra2026-field-notes-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      setRecordStatus("已导出 JSON。媒体文件本身仍保存在本浏览器本地库中。");
+    }
+
+    async function initRecorder() {
+      await openRecordDb();
+      recordEls.save?.addEventListener("click", saveRecord);
+      recordEls.export?.addEventListener("click", exportRecords);
+      recordEls.filter?.addEventListener("change", renderRecords);
+      recordEls.refresh?.addEventListener("click", renderRecords);
+      renderRecords();
+    }
+
+    function applyFilters() {
+      const query = search.value.trim().toLowerCase();
+      let visibleItems = 0;
+      let visibleMaster = 0;
+      let visibleWiki = 0;
+
+      document.querySelectorAll(".item").forEach((item) => {
+        const priorityOk = activePriority === "all" || item.classList.contains(activePriority);
+        const queryOk = !query || textOf(item).includes(query);
+        const show = priorityOk && queryOk;
+        item.classList.toggle("is-hidden", !show);
+        if (item.dataset.eventId) {
+          document.querySelectorAll(`.time-block[data-event-id="${item.dataset.eventId}"]`).forEach((block) => {
+            block.classList.toggle("is-hidden", !show);
+          });
+        }
+        if (show) visibleItems += 1;
+      });
+
+      document.querySelectorAll(".parallel-options").forEach((group) => {
+        const anyVisible = [...group.querySelectorAll(".item")].some((item) => !item.classList.contains("is-hidden"));
+        group.classList.toggle("is-hidden", !anyVisible);
+      });
+
+      document.querySelectorAll(".day").forEach((day) => {
+        const anyVisible = [...day.querySelectorAll(".item")].some((item) => !item.classList.contains("is-hidden"));
+        day.classList.toggle("is-hidden", !anyVisible);
+      });
+
+      document.querySelectorAll(".master-event").forEach((event) => {
+        const priorityOk = activePriority === "all" || event.classList.contains(activePriority);
+        const queryOk = !query || textOf(event).includes(query);
+        const show = priorityOk && queryOk;
+        event.classList.toggle("is-hidden", !show);
+        if (show) visibleMaster += 1;
+      });
+
+      document.querySelectorAll(".master-day").forEach((day) => {
+        const anyVisible = [...day.querySelectorAll(".master-event")].some((event) => !event.classList.contains("is-hidden"));
+        day.classList.toggle("is-hidden", !anyVisible);
+      });
+
+      document.querySelectorAll(".wiki").forEach((wiki) => {
+        const queryOk = !query || textOf(wiki).includes(query);
+        wiki.classList.toggle("is-hidden", !queryOk);
+        if (queryOk) visibleWiki += 1;
+        if (query && queryOk) wiki.open = true;
+      });
+
+      resultCount.textContent = `当前显示 ${visibleMaster} 个主时间线节点 / ${visibleItems} 个完整日程卡片 / ${visibleWiki} 个百科条目。搜索和优先级筛选支持主时间线与完整明细。`;
+    }
+
+    search.addEventListener("input", applyFilters);
+
+    priorityButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activePriority = button.dataset.priority;
+        priorityButtons.forEach((b) => b.classList.toggle("active", b === button));
+        applyFilters();
+      });
+    });
+
+    function openContainingDrawer(sectionId) {
+      if (!sectionId) return;
+      document.querySelectorAll(".dimension-drawer").forEach((drawer) => {
+        const sections = (drawer.dataset.sections || "").split(/\s+/);
+        if (sections.includes(sectionId)) drawer.open = true;
+      });
+    }
+
+    document.querySelectorAll("[data-open-section]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const sectionId = link.dataset.openSection;
+        openContainingDrawer(sectionId);
+        const target = document.getElementById(sectionId);
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    document.getElementById("expandAll").addEventListener("click", () => {
+      document.querySelectorAll("details").forEach((details) => {
+        if (!details.classList.contains("is-hidden")) details.open = true;
+      });
+    });
+
+    document.getElementById("collapseAll").addEventListener("click", () => {
+      document.querySelectorAll("details").forEach((details) => {
+        if (!details.matches("#wiki-venue")) details.open = false;
+      });
+    });
+
+    document.getElementById("loadImages").addEventListener("click", () => {
+      loadSpeakerImages(document);
+    });
+
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest(".load-images");
+      if (!button) return;
+      loadSpeakerImages(button.closest(".master-detail") || document);
+    });
+
+    document.getElementById("backTop").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    buildVisualTimelines();
+    groupParallelAlternatives();
+    buildMasterTimeline();
+    wrapSupportDimensions();
+    initRecorder();
+    applyFilters();
+  </script>
+</body>
+</html>
